@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PLNK82BD');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Integración de IA a WhatsApp — Chatbot para empresas | SARUBIA</title>
+<meta name="description" content="Agente de IA entrenado con tu negocio, integrado a tu WhatsApp. Responde consultas 24/7, califica interesados y deriva solo lo importante. Entrega en 24–48 hs.">
+<link rel="canonical" href="https://sarubi-ia.com/integracion-ia-whatsapp/">
+
+<!-- Vista previa al compartir el link -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SARUBIA">
+<meta property="og:locale" content="es_AR">
+<meta property="og:url" content="https://sarubi-ia.com/integracion-ia-whatsapp/">
+<meta property="og:title" content="Integración de IA a WhatsApp — Chatbot para empresas | SARUBIA">
+<meta property="og:description" content="Agente de IA entrenado con tu negocio, integrado a tu WhatsApp. Responde consultas 24/7 y deriva solo lo importante. Entrega en 24–48 hs.">
+<meta property="og:image" content="https://sarubi-ia.com/imagenes/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SARUBIA — Integración de IA a WhatsApp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Integración de IA a WhatsApp — Chatbot para empresas | SARUBIA">
+<meta name="twitter:description" content="Agente de IA entrenado con tu negocio, integrado a tu WhatsApp. Entrega en 24–48 hs.">
+<meta name="twitter:image" content="https://sarubi-ia.com/imagenes/og.jpg">
+
+<link rel="icon" type="image/png" href="../imagenes/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF; --bg-soft:#F4F6F9;
+    --ink:#0B0D10; --text:#10141C;
+    --muted:#5B6472; --muted-2:#8A93A3;
+    --line:#E3E7ED; --line-strong:#CDD3DD;
+    --accent:#0E9E7A; --accent-dark:#0B7F62; --accent-soft:#E3F6EF;
+    --accent-on-dark:#2FE0AE;
+    --radius:10px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:'Inter', system-ui, -apple-system, sans-serif;
+    line-height:1.55; overflow-x:hidden; -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  picture{display:contents;}
+  .mono{font-family:'Inter',sans-serif; letter-spacing:.06em; font-weight:600; font-size:.92em;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+  @media(prefers-reduced-motion:reduce){*{transition-duration:.01ms !important;}}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(11,13,16,.92); backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .header-inner{
+    max-width:1180px; margin:0 auto; padding:14px 32px;
+    display:flex; align-items:center; justify-content:space-between; gap:20px;
+  }
+  .logo{display:flex; align-items:center; gap:10px;}
+  .logo-mark{width:28px; height:28px; border-radius:7px; object-fit:cover; flex-shrink:0;}
+  .logo-text{font-size:16px; font-weight:600; color:#F2F4F7;}
+  .logo-text span{color:var(--accent-on-dark);}
+  header nav{display:flex; align-items:center; gap:26px;}
+  header nav a{font-size:14px; color:#C7CDD6;}
+  header nav a:hover{color:#fff;}
+  .nav-cta{
+    background:var(--accent); color:#06231A !important; font-weight:600;
+    padding:9px 18px; border-radius:8px;
+  }
+  @media(max-width:760px){
+    header nav{gap:16px;}
+    header nav a:not(.nav-cta){display:none;}
+  }
+
+  /* ---------- migas ---------- */
+  .migas{border-bottom:1px solid var(--line); background:var(--bg-soft);}
+  .migas ol{
+    max-width:1180px; margin:0 auto; padding:13px 32px;
+    list-style:none; display:flex; flex-wrap:wrap; align-items:center; gap:9px;
+    font-size:13px; color:var(--muted);
+  }
+  .migas li{display:flex; align-items:center; gap:9px;}
+  .migas a{color:var(--muted);}
+  .migas a:hover{color:var(--accent-dark);}
+  .migas li[aria-current]{color:var(--text); font-weight:600;}
+  .migas .sep{color:var(--line-strong);}
+
+  /* ---------- hero ---------- */
+  .hero{padding:74px 0 60px; border-bottom:1px solid var(--line);}
+  .hero-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:58px; align-items:start;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:600;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--accent-dark);
+    background:var(--accent-soft); padding:7px 13px; border-radius:999px; margin-bottom:22px;
+  }
+  h1{
+    font-size:clamp(34px,5.2vw,52px); font-weight:800; letter-spacing:-.028em;
+    line-height:1.08; text-wrap:balance; margin-bottom:20px;
+  }
+  h1 span{color:var(--accent);}
+  .bajada{font-size:18px; color:var(--muted); max-width:56ch; margin-bottom:30px;}
+  .acciones{display:flex; flex-wrap:wrap; gap:13px; margin-bottom:26px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:9px;
+    padding:15px 26px; border-radius:var(--radius); font-size:15px; font-weight:600;
+  }
+  .btn-p{background:var(--accent); color:#fff;}
+  .btn-p:hover{background:var(--accent-dark);}
+  .btn-s{border:1px solid var(--line-strong); color:var(--text);}
+  .btn-s:hover{border-color:var(--accent); color:var(--accent-dark);}
+  .garantias{display:flex; flex-wrap:wrap; gap:20px; font-size:13.5px; color:var(--muted);}
+  .garantias span::before{content:"✔"; color:var(--accent); margin-right:7px; font-weight:700;}
+
+  /* ---------- ficha de precio ---------- */
+  .ficha{
+    border:1px solid var(--line); border-radius:14px; padding:30px;
+    background:var(--bg-soft); position:sticky; top:96px;
+  }
+  .ficha-tag{
+    font-size:11.5px; font-weight:700; letter-spacing:.13em; text-transform:uppercase;
+    color:var(--accent-dark); margin-bottom:14px;
+  }
+  .precio{font-size:44px; font-weight:800; letter-spacing:-.03em; line-height:1; color:var(--accent);}
+  .precio-nota{font-size:12.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--muted-2); margin-top:9px;}
+  .ficha ul{list-style:none; margin:24px 0; display:flex; flex-direction:column; gap:12px;}
+  .ficha li{display:flex; gap:11px; font-size:14.5px; align-items:flex-start;}
+  .ficha li::before{
+    content:"✓"; flex-shrink:0; width:20px; height:20px; border-radius:6px; margin-top:1px;
+    background:var(--accent-soft); color:var(--accent-dark);
+    display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700;
+  }
+  .ficha .btn{width:100%; justify-content:center;}
+
+  /* ---------- secciones ---------- */
+  .seccion{padding:62px 0; border-bottom:1px solid var(--line);}
+  .rotulo{
+    font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--accent-dark); margin-bottom:14px;
+  }
+  h2{font-size:clamp(25px,3.6vw,34px); font-weight:700; letter-spacing:-.022em; margin-bottom:16px; text-wrap:balance;}
+  .seccion > .wrap > p{color:var(--muted); max-width:62ch; font-size:16.5px;}
+
+  .pasos{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); margin-top:36px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .paso{background:var(--bg); padding:28px 26px 28px 0;}
+  .paso:not(:first-child){padding-left:26px;}
+  .paso-n{font-size:12.5px; font-weight:700; letter-spacing:.1em; color:var(--accent); font-variant-numeric:tabular-nums;}
+  .paso h3{font-size:19px; font-weight:700; letter-spacing:-.015em; margin:9px 0 8px;}
+  .paso p{font-size:14.5px; color:var(--muted);}
+
+  .incluye{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin-top:34px;}
+  .item{border:1px solid var(--line); border-radius:var(--radius); padding:20px 22px;}
+  .item h3{font-size:16px; font-weight:650; margin-bottom:6px;}
+  .item p{font-size:14px; color:var(--muted);}
+
+  .faq{margin-top:32px; border-top:1px solid var(--line);}
+  .faq details{border-bottom:1px solid var(--line);}
+  .faq summary{
+    padding:20px 0; font-size:17px; font-weight:600; cursor:pointer;
+    display:flex; justify-content:space-between; align-items:center; gap:20px;
+    letter-spacing:-.012em;
+  }
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:"+"; color:var(--accent); font-weight:700; font-size:21px; flex-shrink:0;}
+  .faq details[open] summary::after{content:"–";}
+  .faq p{padding:0 0 22px; color:var(--muted); max-width:66ch; font-size:15.5px;}
+
+  .cierre{background:var(--ink); color:#F2F4F7; padding:66px 0; text-align:center;}
+  .cierre h2{color:#fff; margin-bottom:14px;}
+  .cierre p{color:#AEB6C2; max-width:52ch; margin:0 auto 28px; font-size:16.5px;}
+  .cierre .btn-p{background:var(--accent-on-dark); color:#05231B;}
+
+  /* ---------- pie ---------- */
+  footer{background:var(--ink); color:#AEB6C2; padding:52px 0 30px; border-top:1px solid rgba(255,255,255,.08);}
+  .footer-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:34px; margin-bottom:36px;}
+  .footer-col h4{color:#F2F4F7; font-size:13px; margin-bottom:13px;}
+  .footer-col a, .footer-col p{display:block; color:#AEB6C2; font-size:14px; margin-bottom:9px;}
+  .footer-col a:hover{color:var(--accent-on-dark);}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,.08); padding-top:20px;
+    display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between;
+    font-size:12.5px; color:var(--muted-2);
+  }
+
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr; gap:38px;}
+    .ficha{position:static;}
+    .pasos{grid-template-columns:1fr;}
+    .paso{padding:24px 0;}
+    .paso:not(:first-child){padding-left:0;}
+  }
+  @media(max-width:560px){
+    .wrap, .header-inner, .migas ol{padding-left:20px; padding-right:20px;}
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://sarubi-ia.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://sarubi-ia.com/#servicios" },
+        { "@type": "ListItem", "position": 3, "name": "Integración de IA a WhatsApp" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Integración de IA a WhatsApp",
+      "serviceType": "Chatbot con inteligencia artificial para WhatsApp",
+      "description": "Agente de IA entrenado con la información de tu negocio, integrado a tu WhatsApp. Responde consultas, califica interesados y deriva solo lo que necesita atención humana.",
+      "url": "https://sarubi-ia.com/integracion-ia-whatsapp/",
+      "areaServed": { "@type": "Country", "name": "Argentina" },
+      "provider": { "@id": "https://sarubi-ia.com/#organizacion" },
+      "offers": {
+        "@type": "Offer",
+        "price": "49000",
+        "priceCurrency": "ARS",
+        "availability": "https://schema.org/InStock",
+        "url": "https://sarubi-ia.com/integracion-ia-whatsapp/",
+        "category": "Oferta de lanzamiento"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Necesito cambiar mi número de WhatsApp?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. La integración se hace sobre el mismo número que ya usás, en el mismo teléfono. Tus clientes no notan ningún cambio de contacto." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hace falta saber de programación?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. La configuración la hacemos nosotros de punta a punta. Vos aportás la información de tu negocio y nosotros entrenamos al agente." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tarda la implementación?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Entre 24 y 48 horas desde que tenemos la información de tu negocio. Incluye la configuración, el primer flujo conversacional y las pruebas de funcionamiento." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El agente responde todo solo o puedo intervenir?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Responde las consultas habituales y te deriva las que necesitan tu atención. Vos podés tomar cualquier conversación en cualquier momento desde el mismo WhatsApp." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hay contrato o permanencia mínima?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No hay contrato ni permanencia. La implementación se paga una vez e incluye soporte durante toda la configuración." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body id="top">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PLNK82BD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img class="logo-mark" src="../imagenes/logo.png" width="28" height="28" alt="Logo SARUBIA">
+      <span class="logo-text">SARUB<span>IA</span></span>
+    </a>
+    <nav>
+      <a href="/#servicios">Servicios</a>
+      <a href="/#nosotros">Quiénes somos</a>
+      <a href="/#contacto">Contacto</a>
+      <a href="https://wa.me/5491132351644" target="_blank" rel="noopener" class="nav-cta">Hablemos</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="migas" aria-label="Ubicación">
+  <ol>
+    <li><a href="/">Inicio</a></li>
+    <li><span class="sep">/</span><a href="/#servicios">Servicios</a></li>
+    <li><span class="sep">/</span><span aria-current="page">Integración de IA a WhatsApp</span></li>
+  </ol>
+</nav>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Oferta de lanzamiento</span>
+        <h1>Integrá una IA a tu WhatsApp y atendé <span>24/7</span></h1>
+        <p class="bajada">
+          Un agente de inteligencia artificial entrenado con la información de tu negocio,
+          funcionando sobre el WhatsApp que ya usás. Responde consultas, califica interesados
+          y te deriva solo lo que necesita tu atención — sin contratar más personal y sin que
+          toques una línea de código.
+        </p>
+        <div class="acciones">
+          <a href="https://wa.me/5491132351644" target="_blank" rel="noopener" class="btn btn-p">💬 Solicitar integración</a>
+          <a href="#como-funciona" class="btn btn-s">Ver cómo funciona</a>
+        </div>
+        <div class="garantias">
+          <span>Sin contratos</span>
+          <span>Implementación rápida</span>
+          <span>Soporte durante la configuración</span>
+        </div>
+      </div>
+
+      <aside class="ficha">
+        <div class="ficha-tag">Oferta por tiempo limitado</div>
+        <div class="precio">AR$ 49.000</div>
+        <div class="precio-nota">Pago único · Sin permanencia</div>
+        <ul>
+          <li>Integración con WhatsApp</li>
+          <li>Configuración completa</li>
+          <li>IA entrenada con tu negocio</li>
+          <li>Entrega en 24–48 hs</li>
+          <li>Sin conocimientos técnicos</li>
+        </ul>
+        <a href="https://wa.me/5491132351644" target="_blank" rel="noopener" class="btn btn-p">Solicitar integración</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="seccion" id="como-funciona">
+    <div class="wrap">
+      <div class="rotulo">Cómo funciona</div>
+      <h2>Tres pasos, y queda respondiendo sola</h2>
+      <p>
+        La implementación la hacemos nosotros de punta a punta. Vos aportás la información
+        de tu negocio; el resto corre por nuestra cuenta.
+      </p>
+      <div class="pasos">
+        <div class="paso">
+          <div class="paso-n">01</div>
+          <h3>Conectamos tu WhatsApp</h3>
+          <p>El mismo número y el mismo teléfono que ya usás. Tus clientes no notan ningún cambio de contacto.</p>
+        </div>
+        <div class="paso">
+          <div class="paso-n">02</div>
+          <h3>Entrenamos la IA con tu negocio</h3>
+          <p>Tus productos, tus precios, tus tiempos de entrega y tu forma de responder. El agente contesta como contestarías vos.</p>
+        </div>
+        <div class="paso">
+          <div class="paso-n">03</div>
+          <h3>Queda respondiendo sola</h3>
+          <p>Atiende las consultas habituales las 24 horas y te deriva solo las que necesitan tu atención.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="que-incluye">
+    <div class="wrap">
+      <div class="rotulo">Qué incluye</div>
+      <h2>Todo lo necesario para dejarlo andando</h2>
+      <p>
+        Tu agente de IA queda listo para automatizar conversaciones, calificar consultas y
+        responder como un verdadero chatbot con inteligencia artificial.
+      </p>
+      <div class="incluye">
+        <div class="item"><h3>Configuración inicial</h3><p>Puesta en marcha completa del agente, de principio a fin.</p></div>
+        <div class="item"><h3>Integración con WhatsApp</h3><p>Sobre tu número actual, sin migrar nada.</p></div>
+        <div class="item"><h3>Personalización del asistente</h3><p>El tono y la información de tu negocio, no un texto genérico.</p></div>
+        <div class="item"><h3>Primer flujo conversacional</h3><p>El recorrido de las consultas que más te llegan, armado y probado.</p></div>
+        <div class="item"><h3>Pruebas de funcionamiento</h3><p>Lo verificamos con casos reales antes de dejarlo en producción.</p></div>
+        <div class="item"><h3>Soporte durante la configuración</h3><p>Acompañamiento hasta que quede funcionando como esperás.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="preguntas">
+    <div class="wrap">
+      <div class="rotulo">Preguntas frecuentes</div>
+      <h2>Lo que más nos preguntan</h2>
+      <div class="faq">
+        <details open>
+          <summary>¿Necesito cambiar mi número de WhatsApp?</summary>
+          <p>No. La integración se hace sobre el mismo número que ya usás, en el mismo teléfono. Tus clientes no notan ningún cambio de contacto.</p>
+        </details>
+        <details>
+          <summary>¿Hace falta saber de programación?</summary>
+          <p>No. La configuración la hacemos nosotros de punta a punta. Vos aportás la información de tu negocio y nosotros entrenamos al agente.</p>
+        </details>
+        <details>
+          <summary>¿Cuánto tarda la implementación?</summary>
+          <p>Entre 24 y 48 horas desde que tenemos la información de tu negocio. Incluye la configuración, el primer flujo conversacional y las pruebas de funcionamiento.</p>
+        </details>
+        <details>
+          <summary>¿El agente responde todo solo o puedo intervenir?</summary>
+          <p>Responde las consultas habituales y te deriva las que necesitan tu atención. Vos podés tomar cualquier conversación en cualquier momento desde el mismo WhatsApp.</p>
+        </details>
+        <details>
+          <summary>¿Hay contrato o permanencia mínima?</summary>
+          <p>No hay contrato ni permanencia. La implementación se paga una vez e incluye soporte durante toda la configuración.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cierre">
+    <div class="wrap">
+      <h2>¿Lo dejamos andando esta semana?</h2>
+      <p>Escribinos y te contamos qué se puede automatizar en tu caso. El diagnóstico es una charla, no una cotización.</p>
+      <a href="https://wa.me/5491132351644" target="_blank" rel="noopener" class="btn btn-p">💬 Escribinos por WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+          <img src="../imagenes/logo.png" width="26" height="26" alt="Logo SARUBIA" style="width:26px; height:26px; border-radius:6px; object-fit:cover;">
+          <h4 class="mono" style="margin:0;">SARUB<span style="color:var(--accent-on-dark);">IA</span></h4>
+        </div>
+        <p style="max-width:220px;">Inteligencia artificial aplicada a resultados reales.</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="mono">Contacto</h4>
+        <a href="https://wa.me/5491132351644" target="_blank" rel="noopener">WhatsApp: +54 9 11 3235-1644</a>
+      </div>
+      <div class="footer-col">
+        <h4 class="mono">Navegación</h4>
+        <a href="/">Inicio</a>
+        <a href="/#servicios">Servicios</a>
+        <a href="/#nosotros">Quiénes somos</a>
+      </div>
+      <div class="footer-col">
+        <h4 class="mono">Redes</h4>
+        <a href="https://www.instagram.com/sarubi_ai_solutions" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SARUBIA. Todos los derechos reservados.</span>
+      <span class="mono">BUENOS AIRES, AR</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

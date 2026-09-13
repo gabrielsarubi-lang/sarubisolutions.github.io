@@ -135,6 +135,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .precio{font-size:44px; font-weight:800; letter-spacing:-.03em; line-height:1; color:var(--accent);}
   .precio-nota{font-size:12.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--muted-2); margin-top:9px;}
+  .precio-usd{font-size:15px; font-weight:600; color:var(--muted); margin-top:7px; font-variant-numeric:tabular-nums;}
+  .cambio-nota{font-size:12px; color:var(--muted-2); line-height:1.5; margin-top:14px;}
   .ficha ul{list-style:none; margin:24px 0; display:flex; flex-direction:column; gap:12px;}
   .ficha li{display:flex; gap:11px; font-size:14.5px; align-items:flex-start;}
   .ficha li::before{
@@ -282,6 +284,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </a>
     <nav>
       <a href="/#servicios">Servicios</a>
+      <a href="/planes/">Planes</a>
       <a href="/#nosotros">Quiénes somos</a>
       <a href="/#contacto">Contacto</a>
       <a href="https://wa.me/5491132351644" target="_blank" rel="noopener" class="nav-cta">Hablemos</a>
@@ -323,6 +326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <aside class="ficha">
         <div class="ficha-tag">Oferta por tiempo limitado</div>
         <div class="precio">AR$ 49.000</div>
+        <div class="precio-usd">≈ USD 32</div>
         <div class="precio-nota">Pago único · Sin permanencia</div>
         <ul>
           <li>Integración con WhatsApp</li>
@@ -332,6 +336,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>Sin conocimientos técnicos</li>
         </ul>
         <a href="https://wa.me/5491132351644" target="_blank" rel="noopener" class="btn btn-p">Solicitar integración</a>
+        <!-- Cotización de dolarapi.com y criptoya.com, 13/09/2026. Dólar MEP venta AR$ 1.540. -->
+        <p class="cambio-nota">Valor en dólares de referencia al cambio del 13/09/2026 (USD 1 = AR$ 1.540). La facturación es en pesos.</p>
+        <p style="text-align:center; font-size:13.5px; color:var(--muted); margin-top:16px;">¿Necesitás más alcance? <a href="/planes/" style="color:var(--accent-dark); font-weight:600; text-decoration:underline;">Ver los tres planes</a></p>
       </aside>
     </div>
   </section>
@@ -438,6 +445,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="footer-col">
         <h4 class="mono">Navegación</h4>
         <a href="/">Inicio</a>
+        <a href="/planes/">Planes y precios</a>
         <a href="/#servicios">Servicios</a>
         <a href="/#nosotros">Quiénes somos</a>
       </div>

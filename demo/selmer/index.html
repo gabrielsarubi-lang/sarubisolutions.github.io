@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Vista previa privada: fuera de buscadores, fuera del sitemap y sin enlaces entrantes. -->
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow">
+
+<title>SELMER | Contadores &amp; Impuestos — Monotributo, ARCA y PyMEs</title>
+<meta name="description" content="Estudio contable 100% online. Gestionamos monotributo, responsable inscripto, ARCA, ARBA e IVA mes a mes y te mantenemos informado. Escribinos por WhatsApp.">
+<meta property="og:title" content="SELMER | Contadores &amp; Impuestos">
+<meta property="og:description" content="Que tus impuestos no te sorprendan. Servicio contable e impositivo mensual, 100% online, en toda la Argentina.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0E1B33; --navy-2:#16274A; --navy-3:#1E3159;
+  --gold:#C9A063; --gold-dark:#A8823F;
+  --cream:#F5F0E8; --white:#fff; --ink:#0E1B33; --muted:#5B6475;
+  --radius:14px; --maxw:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2.1rem,6vw,3.6rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,4.2vw,2.6rem)}
+h3{font-size:1.18rem;font-family:Inter,sans-serif;font-weight:600;line-height:1.35}
+p{margin:0 0 1rem}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:20px}
+section{padding-block:clamp(56px,9vw,104px)}
+.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:.9rem}
+.dark .eyebrow{color:var(--gold)}
+.lead{font-size:1.06rem;color:var(--muted);max-width:62ch}
+.dark{background:var(--navy);color:var(--white)}
+.dark .lead{color:#C7CEDB}
+.cream{background:var(--cream)}
+
+/* ===== Barra de vista previa — la agrega SARUBIA, no es parte del diseño del sitio ===== */
+.sarubia-preview{
+  position:relative;z-index:60;
+  background:#1A1A1A;color:#EDEDED;
+  font-family:Inter,system-ui,sans-serif;font-size:13px;line-height:1.45;
+  padding:10px 20px;
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 14px;
+  text-align:center;
+  border-bottom:1px solid #333;
+}
+.sarubia-preview b{font-weight:700;color:#fff}
+.sarubia-preview .sp-marca{color:#2FE0AE;font-weight:700;letter-spacing:.02em}
+@media(max-width:560px){.sarubia-preview{font-size:12px;padding:9px 16px}}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:15px 28px;border-radius:999px;font-weight:600;font-size:1rem;text-decoration:none;border:1.5px solid transparent;transition:transform .15s ease,background .15s ease,box-shadow .15s ease;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.btn-primary{background:var(--gold);color:var(--navy);box-shadow:0 6px 20px rgba(201,160,99,.28)}
+.btn-primary:hover{background:#D9B47C}
+.btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.btn-outline{border-color:var(--navy);color:var(--navy)}
+.btn-outline:hover{background:var(--navy);color:#fff}
+.btn svg{flex:none}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(14,27,51,.93);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:#fff}
+.brand-name{font-family:"Cormorant Garamond",serif;font-size:1.32rem;letter-spacing:.34em;font-weight:400;padding-left:.34em}
+.nav-links{display:none;gap:28px;font-size:.93rem}
+.nav-links a{text-decoration:none;color:#D6DCE8}
+.nav-links a:hover{color:var(--gold)}
+.nav .btn{padding:10px 20px;font-size:.9rem}
+@media(min-width:900px){.nav-links{display:flex}}
+
+/* Hero */
+.hero{background:radial-gradient(1100px 520px at 50% -12%,#1E3159 0%,var(--navy) 62%);text-align:center;padding-block:0}
+.hero .wrap{padding-block:clamp(52px,9vw,96px)}
+.hero-logo{width:104px;height:104px;margin:0 auto 26px}
+.hero h1{max-width:16ch;margin-inline:auto;color:#fff}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{max-width:56ch;margin-inline:auto;color:#C7CEDB;font-size:1.1rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:30px}
+.hero-note{margin-top:22px;font-size:.87rem;color:#9AA6BC}
+
+/* Chips público */
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:38px;padding-top:34px;border-top:1px solid rgba(255,255,255,.12)}
+.chip{font-size:.85rem;font-weight:500;color:#D6DCE8;border:1px solid rgba(201,160,99,.45);border-radius:999px;padding:7px 16px}
+
+/* Grillas */
+.grid{display:grid;gap:20px}
+@media(min-width:680px){.g2{grid-template-columns:repeat(2,1fr)}.g4{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}}
+
+.card{background:#fff;border:1px solid #E7E2D9;border-radius:var(--radius);padding:26px}
+.dark .card{background:var(--navy-2);border-color:rgba(255,255,255,.1)}
+.card p{margin:0;color:var(--muted);font-size:.96rem}
+.dark .card p{color:#C7CEDB}
+.card-ico{width:44px;height:44px;border-radius:11px;background:var(--navy);color:var(--gold);display:grid;place-items:center;margin-bottom:16px}
+.dark .card-ico{background:rgba(201,160,99,.14)}
+
+/* Pasos */
+.step{position:relative;padding-left:60px}
+.step-n{position:absolute;left:0;top:2px;width:42px;height:42px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-weight:700;font-family:"Cormorant Garamond",serif;font-size:1.3rem}
+.step h3{margin-bottom:.35rem}
+.step p{color:#C7CEDB;font-size:.96rem;margin:0}
+
+/* Lista de servicios */
+.svc h3{margin-bottom:.45rem}
+.svc ul{margin:0;padding-left:1.05rem;color:var(--muted);font-size:.94rem}
+.svc li{margin-bottom:.25rem}
+
+/* FAQ */
+.faq{max-width:780px;margin-inline:auto}
+details{border-bottom:1px solid #E7E2D9;padding:18px 0}
+summary{cursor:pointer;font-weight:600;font-size:1.03rem;list-style:none;display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--gold-dark);flex:none;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:.85rem 0 0;color:var(--muted);font-size:.97rem;max-width:66ch}
+
+/* CTA final */
+.final{text-align:center}
+.final h2{color:#fff;max-width:20ch;margin-inline:auto}
+.final .lead{margin-inline:auto;text-align:center}
+
+/* Footer */
+footer{background:#0A1426;color:#93A0B8;font-size:.88rem;padding-block:40px}
+footer a{color:#C7CEDB}
+.foot-top{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:22px}
+.legal{max-width:80ch;font-size:.8rem;line-height:1.6;color:#7C8AA3}
+
+/* WhatsApp flotante */
+.wa-float{position:fixed;right:16px;bottom:16px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.28)}
+.wa-float:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<div class="sarubia-preview" role="note">
+  <span><b>Vista previa</b> — no es el sitio oficial de SELMER.</span>
+  <span>Preparada por <span class="sp-marca">SARUBIA</span> a modo de propuesta.</span>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#inicio" aria-label="SELMER, inicio">
+      <svg width="38" height="38" viewBox="0 0 100 100" role="img" aria-label="Logo SELMER">
+        <circle cx="50" cy="50" r="50" fill="#F5F0E8"/>
+        <path d="M60 24c-9 0-15 5-15 12 0 12 20 9 20 20 0 6-5 10-12 10-6 0-10-2-13-6" fill="none" stroke="#0E1B33" stroke-width="6" stroke-linecap="round"/>
+        <path d="M34 74V36l16 20 16-20v38" fill="none" stroke="#C9A063" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" opacity=".92"/>
+      </svg>
+      <span class="brand-name">SELMER</span>
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#como">Cómo trabajamos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#faq">Preguntas</a>
+    </nav>
+    <a class="btn btn-primary" href="https://wa.me/54911XXXXXXX?text=Hola%20SELMER%2C%20quiero%20consultar%20por%20el%20servicio%20contable%20mensual." target="_blank" rel="noopener">Escribinos</a>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- HERO -->
+  <section class="hero dark">
+    <div class="wrap">
+      <svg class="hero-logo" viewBox="0 0 100 100" role="img" aria-label="Logo de SELMER, estudio contable">
+        <circle cx="50" cy="50" r="50" fill="#F5F0E8"/>
+        <path d="M60 24c-9 0-15 5-15 12 0 12 20 9 20 20 0 6-5 10-12 10-6 0-10-2-13-6" fill="none" stroke="#0E1B33" stroke-width="6" stroke-linecap="round"/>
+        <path d="M34 74V36l16 20 16-20v38" fill="none" stroke="#C9A063" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" opacity=".92"/>
+      </svg>
+      <h1>Que tus impuestos <em>no te sorprendan</em></h1>
+      <p>Contadores para monotributistas, responsables inscriptos y PyMEs. Gestionamos tus obligaciones mes a mes y te mantenemos informado de lo que pasa con tu situación fiscal.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="https://wa.me/54911XXXXXXX?text=Hola%20SELMER%2C%20quiero%20consultar%20por%20el%20servicio%20contable%20mensual." target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+          Consultar por WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+      </div>
+      <p class="hero-note">100% online · Atendemos en toda la Argentina</p>
+
+      <div class="chips">
+        <span class="chip">Monotributistas</span>
+        <span class="chip">Responsables Inscriptos</span>
+        <span class="chip">Monotributo Social</span>
+        <span class="chip">Emprendedores</span>
+        <span class="chip">PyMEs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMA -->
+  <section class="cream">
+    <div class="wrap">
+      <p class="eyebrow">El problema real</p>
+      <h2>Muchas veces no es tener impuestos que pagar. Es no saber en qué estado estás.</h2>
+      <p class="lead">Qué se presentó y qué quedó pendiente. Si hay deuda. Cuándo vence lo que viene. Si estás facturando como corresponde para tu actividad. Tener un contador no debería significar únicamente presentar impuestos: deberías saber qué está pasando con ellos.</p>
+      <div class="grid g3" style="margin-top:38px">
+        <div class="card">
+          <h3>Te enterás tarde</h3>
+          <p>Los vencimientos aparecen cuando ya pasaron, y con ellos los intereses y las multas.</p>
+        </div>
+        <div class="card">
+          <h3>No sabés si estás bien</h3>
+          <p>Facturás de a poco, cobrás por transferencia y nunca terminás de saber si tu categoría es la que corresponde.</p>
+        </div>
+        <div class="card">
+          <h3>Preguntás y no te contestan</h3>
+          <p>Necesitás una respuesta concreta y esperás días, o te responden en un idioma que no entendés.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO TRABAJAMOS -->
+  <section id="como" class="dark">
+    <div class="wrap">
+      <p class="eyebrow">Cómo trabajamos</p>
+      <h2 style="color:#fff">Un servicio mensual, no una gestión suelta</h2>
+      <p class="lead" style="margin-bottom:44px">Nos ocupamos de tus obligaciones todos los meses y te mantenemos al tanto. Así funciona desde el primer día.</p>
+      <div class="grid g4">
+        <div class="step">
+          <span class="step-n" aria-hidden="true">1</span>
+          <h3 style="color:#fff">Revisamos</h3>
+          <p>Analizamos tu situación en ARCA al comenzar: qué está presentado, qué falta y si hay deuda.</p>
+        </div>
+        <div class="step">
+          <span class="step-n" aria-hidden="true">2</span>
+          <h3 style="color:#fff">Gestionamos</h3>
+          <p>Presentamos y liquidamos tus obligaciones mes a mes, en fecha y sin que tengas que recordárnoslo.</p>
+        </div>
+        <div class="step">
+          <span class="step-n" aria-hidden="true">3</span>
+          <h3 style="color:#fff">Informamos</h3>
+          <p>Te avisamos qué se presentó, qué se pagó, qué vence y qué necesitamos de tu parte.</p>
+        </div>
+        <div class="step">
+          <span class="step-n" aria-hidden="true">4</span>
+          <h3 style="color:#fff">Acompañamos</h3>
+          <p>Cuando tenés una duda o una oportunidad, nos escribís y te respondemos en criollo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="wrap">
+      <p class="eyebrow">Servicios</p>
+      <h2>De qué nos ocupamos</h2>
+      <p class="lead" style="margin-bottom:40px">Contabilidad, impuestos y sueldos para quien trabaja por su cuenta y para empresas en crecimiento.</p>
+      <div class="grid g3">
+        <div class="card svc">
+          <div class="card-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 11h6M9 15h4"/><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/></svg></div>
+          <h3>Monotributo</h3>
+          <ul>
+            <li>Alta, baja y modificaciones</li>
+            <li>Recategorización semestral</li>
+            <li>Monotributo Social y Unificado</li>
+          </ul>
+        </div>
+        <div class="card svc">
+          <div class="card-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 21h18M6 21V8m6 13V4m6 17v-9"/></svg></div>
+          <h3>Responsable Inscripto</h3>
+          <ul>
+            <li>Liquidación mensual de IVA</li>
+            <li>Ganancias y Bienes Personales</li>
+            <li>Régimen de información</li>
+          </ul>
+        </div>
+        <div class="card svc">
+          <div class="card-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.6 3.1-5.6 7-5.6s7 2 7 5.6"/></svg></div>
+          <h3>Sueldos y cargas sociales</h3>
+          <ul>
+            <li>Liquidación de haberes</li>
+            <li>Formulario 931</li>
+            <li>Altas y bajas de personal</li>
+          </ul>
+        </div>
+        <div class="card svc">
+          <div class="card-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9h18M3 9l2-5h14l2 5M5 9v11h14V9"/><path d="M9 13h6"/></svg></div>
+          <h3>Ingresos Brutos</h3>
+          <ul>
+            <li>ARBA y AGIP</li>
+            <li>Contribuyentes locales</li>
+            <li>Inmobiliario y Automotores</li>
+          </ul>
+        </div>
+        <div class="card svc">
+          <div class="card-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6"/></svg></div>
+          <h3>Facturación electrónica</h3>
+          <ul>
+            <li>Puesta en marcha y puntos de venta</li>
+            <li>Qué comprobante corresponde emitir</li>
+            <li>Adecuación a cambios normativos</li>
+          </ul>
+        </div>
+        <div class="card svc">
+          <div class="card-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+          <h3>Asesoramiento</h3>
+          <ul>
+            <li>Emprendedores que arrancan</li>
+            <li>PyMEs en crecimiento</li>
+            <li>Elección del régimen que conviene</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIALES -->
+  <section class="cream">
+    <div class="wrap">
+      <p class="eyebrow">Por qué SELMER</p>
+      <h2>Hacemos simple lo complejo</h2>
+      <div class="grid g3" style="margin-top:38px">
+        <div class="card">
+          <h3>100% online, en todo el país</h3>
+          <p>No hace falta que vengas a ninguna oficina ni que coordines una visita. Todo se resuelve por WhatsApp y por mail, desde donde estés.</p>
+        </div>
+        <div class="card">
+          <h3>Te explicamos en criollo</h3>
+          <p>Usamos los términos que hay que usar, pero después te contamos qué significan y qué tenés que hacer vos. Sin que quedes con la duda.</p>
+        </div>
+        <div class="card">
+          <h3>Seguimiento mes a mes</h3>
+          <p>No aparecemos solo cuando vence algo. Revisamos, presentamos y te informamos todos los meses, esté pasando algo o no.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap faq">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2 style="margin-bottom:28px">Lo que más nos consultan</h2>
+
+      <details open>
+        <summary>¿Atienden en todo el país?</summary>
+        <p>Sí. Trabajamos 100% online, así que no importa en qué provincia estés. Toda la documentación se intercambia de forma digital y las consultas las resolvemos por WhatsApp o por mail.</p>
+      </details>
+      <details>
+        <summary>¿Con qué regímenes trabajan?</summary>
+        <p>Monotributo (incluido Monotributo Social y Monotributo Unificado) y Responsable Inscripto. A nivel nacional gestionamos ARCA —IVA, Ganancias, F.931— y a nivel provincial y de CABA, ARBA y AGIP.</p>
+      </details>
+      <details>
+        <summary>Ya tengo contador. ¿Es complicado cambiarme?</summary>
+        <p>No. Necesitamos tus datos fiscales y tus claves para poder operar, revisamos en qué estado quedó tu situación y seguimos desde ahí. El cambio se puede hacer en cualquier momento del año.</p>
+      </details>
+      <details>
+        <summary>¿Qué necesito para empezar?</summary>
+        <p>Escribinos contándonos a qué te dedicás y en qué régimen estás. Con eso revisamos tu situación, te decimos qué hace falta ordenar y te pasamos cómo seguimos.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto cuesta el servicio mensual?</summary>
+        <p>Depende del régimen en el que estés, de si tenés empleados y del volumen de operaciones. Contanos tu caso por WhatsApp y te pasamos el valor exacto para tu situación.</p>
+      </details>
+      <details>
+        <summary>¿Liquidan sueldos?</summary>
+        <p>Sí. Liquidamos haberes, presentamos el F.931 y gestionamos altas y bajas de personal.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="dark final">
+    <div class="wrap">
+      <p class="eyebrow">Empezá hoy</p>
+      <h2>Contanos tu situación y te decimos cómo seguir</h2>
+      <p class="lead">Escribinos por WhatsApp, revisamos en qué estado está tu situación fiscal y te explicamos qué conviene hacer. Sin vueltas.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="https://wa.me/54911XXXXXXX?text=Hola%20SELMER%2C%20quiero%20consultar%20por%20el%20servicio%20contable%20mensual." target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+          Escribinos por WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/selmer.arg/" target="_blank" rel="noopener">Ver el Instagram</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;letter-spacing:.34em;color:#fff">SELMER</div>
+        <div style="font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)">Contabilidad · Impuestos · Asesoramiento</div>
+      </div>
+      <div style="display:flex;gap:22px;flex-wrap:wrap">
+        <a href="https://www.instagram.com/selmer.arg/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/54911XXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#faq">Preguntas</a>
+      </div>
+    </div>
+    <p style="margin-bottom:10px">Atención 100% online en toda la Argentina.</p>
+    <p class="legal">El contenido de este sitio es informativo y de carácter general. No constituye asesoramiento profesional para un caso particular ni reemplaza la consulta con un contador. Las obligaciones, fechas y regímenes mencionados pueden variar según la situación de cada contribuyente y la normativa vigente. © 2026 SELMER.</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/54911XXXXXXX?text=Hola%20SELMER%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+</body>
+</html>

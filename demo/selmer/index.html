@@ -72,7 +72,9 @@ section{padding-block:clamp(56px,9vw,104px)}
 header{position:sticky;top:0;z-index:50;background:rgba(14,27,51,.93);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:#fff}
-.brand-name{font-family:"Cormorant Garamond",serif;font-size:1.32rem;letter-spacing:.34em;font-weight:400;padding-left:.34em}
+/* El logo viene en JPEG cuadrado: el recorte circular saca las esquinas claras. */
+.logo-mark{width:38px;height:38px;border-radius:50%;object-fit:cover;flex:none}
+.brand-name{font-family:"Cormorant Garamond",serif;font-size:1.34rem;letter-spacing:.34em;font-weight:400;padding-left:.34em}
 .nav-links{display:none;gap:28px;font-size:.93rem}
 .nav-links a{text-decoration:none;color:#D6DCE8}
 .nav-links a:hover{color:var(--gold)}
@@ -82,7 +84,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(14,27,51,.93);backdrop-f
 /* Hero */
 .hero{background:radial-gradient(1100px 520px at 50% -12%,#1E3159 0%,var(--navy) 62%);text-align:center;padding-block:0}
 .hero .wrap{padding-block:clamp(52px,9vw,96px)}
-.hero-logo{width:104px;height:104px;margin:0 auto 26px}
+.hero-logo{width:88px;height:88px;border-radius:50%;object-fit:cover;margin:0 auto 26px}
 .hero h1{max-width:16ch;margin-inline:auto;color:#fff}
 .hero h1 em{font-style:normal;color:var(--gold)}
 .hero p{max-width:56ch;margin-inline:auto;color:#C7CEDB;font-size:1.1rem}
@@ -152,11 +154,6 @@ footer a{color:#C7CEDB}
 <header>
   <div class="wrap nav">
     <a class="brand" href="#inicio" aria-label="SELMER, inicio">
-      <svg width="38" height="38" viewBox="0 0 100 100" role="img" aria-label="Logo SELMER">
-        <circle cx="50" cy="50" r="50" fill="#F5F0E8"/>
-        <path d="M60 24c-9 0-15 5-15 12 0 12 20 9 20 20 0 6-5 10-12 10-6 0-10-2-13-6" fill="none" stroke="#0E1B33" stroke-width="6" stroke-linecap="round"/>
-        <path d="M34 74V36l16 20 16-20v38" fill="none" stroke="#C9A063" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" opacity=".92"/>
-      </svg>
       <span class="brand-name">SELMER</span>
     </a>
     <nav class="nav-links" aria-label="Principal">
@@ -173,11 +170,7 @@ footer a{color:#C7CEDB}
   <!-- HERO -->
   <section class="hero dark">
     <div class="wrap">
-      <svg class="hero-logo" viewBox="0 0 100 100" role="img" aria-label="Logo de SELMER, estudio contable">
-        <circle cx="50" cy="50" r="50" fill="#F5F0E8"/>
-        <path d="M60 24c-9 0-15 5-15 12 0 12 20 9 20 20 0 6-5 10-12 10-6 0-10-2-13-6" fill="none" stroke="#0E1B33" stroke-width="6" stroke-linecap="round"/>
-        <path d="M34 74V36l16 20 16-20v38" fill="none" stroke="#C9A063" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" opacity=".92"/>
-      </svg>
+      <img class="hero-logo" src="logo.jpg" width="88" height="88" alt="Logo de SELMER, estudio contable">
       <h1>Que tus impuestos <em>no te sorprendan</em></h1>
       <p>Contadores para monotributistas, responsables inscriptos y PyMEs. Gestionamos tus obligaciones mes a mes y te mantenemos informado de lo que pasa con tu situación fiscal.</p>
       <div class="hero-cta">

@@ -268,6 +268,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         },
         {
           "@type": "Question",
+          "name": "¿El agente puede agendar turnos?",
+          "acceptedAnswer": { "@type": "Answer", "text": "En esta integración el agente contesta la consulta y te pasa el pedido de turno con el contexto, y la carga en la agenda la hacés vos. Desde el plan Profesional el agente además deja el turno cargado en tu calendario o en tu sistema de gestión, sin intervención." }
+        },
+        {
+          "@type": "Question",
           "name": "¿Por qué hay un abono mensual además de la implementación?",
           "acceptedAnswer": { "@type": "Answer", "text": "Porque un agente de IA consume servicios todos los meses: la API de WhatsApp de Meta, el procesamiento de la IA y el servidor donde vive. El abono cubre esos costos y el mantenimiento. La implementación se abona al contratar y el primer abono recién a los 30 días. No hay permanencia mínima." }
         }
@@ -422,6 +427,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <details>
           <summary>¿El agente responde todo solo o puedo intervenir?</summary>
           <p>Responde las consultas habituales y te deriva las que necesitan tu atención. Vos podés tomar cualquier conversación en cualquier momento desde el mismo WhatsApp.</p>
+        </details>
+        <details>
+          <summary>¿El agente puede agendar turnos?</summary>
+          <p>En esta integración el agente contesta la consulta y te pasa el pedido de turno con todo el contexto, pero la carga en la agenda la hacés vos.</p>
+          <p>Desde el <a href="/planes/">plan Profesional</a> el agente además deja el turno, la visita o la reserva cargada en tu calendario o en tu sistema de gestión, sin que nadie la pase a mano.</p>
         </details>
         <details>
           <summary>¿Por qué hay un abono mensual además de la implementación?</summary>

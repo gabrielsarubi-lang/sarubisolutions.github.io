@@ -259,7 +259,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           "item": {
             "@type": "Service",
             "name": "Plan Profesional — Automatización de atención y gestión",
-            "description": "Varios flujos conversacionales, calificación y derivación de consultas, y conexión con tu sistema de gestión o planilla. Implementación AR$ 390.000 más abono mensual de AR$ 169.000.",
+            "description": "Varios flujos conversacionales, calificación y derivación de consultas, agenda de turnos, visitas o reservas, y conexión con tu sistema de gestión o planilla. Implementación AR$ 390.000 más abono mensual de AR$ 169.000.",
             "url": "https://sarubi-ia.com/planes/",
             "provider": { "@id": "https://sarubi-ia.com/#organizacion" },
             "offers": { "@type": "Offer", "price": "390000", "priceCurrency": "ARS", "availability": "https://schema.org/InStock" }
@@ -283,13 +283,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Puedo empezar con el plan Esencial y subir después?",
+          "name": "¿Puedo empezar con el Esencial y subir después?",
           "acceptedAnswer": { "@type": "Answer", "text": "Sí. Lo que ya está implementado se aprovecha: al pasar de plan se suma lo nuevo sobre lo que tenés andando, no se rehace desde cero. Solo se abona la diferencia del trabajo adicional." }
         },
         {
           "@type": "Question",
           "name": "¿Por qué hay un abono mensual además de la implementación?",
           "acceptedAnswer": { "@type": "Answer", "text": "Porque un agente de IA consume servicios todos los meses: la API de WhatsApp de Meta, el procesamiento de la IA y el servidor donde vive se pagan mes a mes. El abono cubre esos costos y el mantenimiento del agente. La implementación se abona al contratar y el primer abono recién a los 30 días. No hay permanencia mínima." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El agente puede agendar turnos?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Desde el plan Profesional, sí: el agente toma el turno, la visita o la reserva y la deja cargada en tu calendario o en tu sistema de gestión, sin que nadie la pase a mano. En el plan Esencial contesta la consulta y te pasa el pedido con el contexto, y la carga la hacés vos. La integración se arma sobre la agenda que ya usás; en el diagnóstico revisamos cuál es y si se puede conectar." }
         },
         {
           "@type": "Question",
@@ -388,6 +393,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li class="hereda">Todo lo del plan Esencial</li>
           <li>Varios flujos conversacionales</li>
           <li>Calificación y derivación de consultas</li>
+          <li>Agenda de turnos, visitas o reservas</li>
           <li>Conexión con tu planilla o sistema de gestión</li>
           <li>Reporte mensual de conversaciones</li>
           <li>Ajustes incluidos durante el primer mes</li>
@@ -455,6 +461,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <tr><td>IA entrenada con tu negocio</td><td class="si">✓</td><td class="si">✓</td><td class="si">✓</td></tr>
             <tr><td>Flujos conversacionales</td><td>1</td><td>Varios</td><td>Varios</td></tr>
             <tr><td>Calificación y derivación de consultas</td><td class="no">—</td><td class="si">✓</td><td class="si">✓</td></tr>
+            <tr><td>Agenda de turnos, visitas o reservas</td><td class="no">—</td><td class="si">✓</td><td class="si">✓</td></tr>
             <tr><td>Conexión con planilla o gestión</td><td class="no">—</td><td class="si">✓</td><td class="si">✓</td></tr>
             <tr><td>Reporte de conversaciones</td><td class="no">—</td><td>Mensual</td><td>A medida</td></tr>
             <tr><td>Automatización de procesos internos</td><td class="no">—</td><td class="no">—</td><td class="si">✓</td></tr>
@@ -487,6 +494,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <details>
           <summary>¿Qué pasa si supero las conversaciones incluidas?</summary>
           <p>Te avisamos antes de que ocurra, no después. Podés pasar al plan siguiente o abonar el excedente del mes; en ningún caso se corta el servicio sin aviso ni te llega una factura sorpresa.</p>
+        </details>
+        <details>
+          <summary>¿El agente puede agendar turnos?</summary>
+          <p>Desde el plan Profesional, sí: el agente toma el turno, la visita o la reserva y la deja cargada en tu calendario o en tu sistema de gestión, sin que nadie la pase a mano. Es lo que más cambia el día a día en consultorios, inmobiliarias y centros de estética, donde la consulta llega fuera de horario y el turno se pierde si nadie contesta.</p>
+          <p>En el plan Esencial el agente contesta la consulta y te pasa el pedido con todo el contexto, pero la carga en la agenda la hacés vos. La integración se arma sobre la agenda que ya usás: en el diagnóstico revisamos cuál es y si se puede conectar.</p>
         </details>
         <details>
           <summary>¿Cómo sé qué plan me conviene?</summary>

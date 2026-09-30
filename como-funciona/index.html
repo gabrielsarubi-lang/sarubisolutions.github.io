@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PLNK82BD');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómo funciona un agente de IA en WhatsApp | SARUBIA</title>
+<meta name="description" content="Qué hace, qué no hace y cómo se implementa un agente de inteligencia artificial en el WhatsApp de tu negocio. Con el detalle por rubro: clínicas, inmobiliarias, gimnasios, e-commerce y más.">
+<link rel="canonical" href="https://sarubi-ia.com/como-funciona/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="SARUBIA">
+<meta property="og:locale" content="es_AR">
+<meta property="og:url" content="https://sarubi-ia.com/como-funciona/">
+<meta property="og:title" content="Cómo funciona un agente de IA en WhatsApp | SARUBIA">
+<meta property="og:description" content="Qué hace, qué no hace y cómo se implementa, con el detalle por rubro: clínicas, inmobiliarias, gimnasios, e-commerce y más.">
+<meta property="og:image" content="https://sarubi-ia.com/imagenes/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SARUBIA — Cómo funciona un agente de IA en WhatsApp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cómo funciona un agente de IA en WhatsApp | SARUBIA">
+<meta name="twitter:description" content="Qué hace, qué no hace y cómo se implementa, con el detalle por rubro.">
+<meta name="twitter:image" content="https://sarubi-ia.com/imagenes/og.jpg">
+
+<link rel="icon" type="image/png" href="../imagenes/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF; --bg-soft:#F4F6F9;
+    --ink:#0B0D10; --text:#10141C;
+    --muted:#5B6472; --muted-2:#8A93A3;
+    --line:#E3E7ED; --line-strong:#CDD3DD;
+    --accent:#0E9E7A; --accent-dark:#0B7F62; --accent-soft:#E3F6EF;
+    --accent-on-dark:#2FE0AE;
+    --radius:10px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:'Inter', system-ui, -apple-system, sans-serif;
+    line-height:1.55; overflow-x:hidden; -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .mono{font-family:'Inter',sans-serif; letter-spacing:.06em; font-weight:600; font-size:.92em;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+  @media(prefers-reduced-motion:reduce){*{transition-duration:.01ms !important;}}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(11,13,16,.92); backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .header-inner{
+    max-width:1180px; margin:0 auto; padding:14px 32px;
+    display:flex; align-items:center; justify-content:space-between; gap:20px;
+  }
+  .logo{display:flex; align-items:center; gap:10px;}
+  .logo-mark{width:28px; height:28px; border-radius:7px; object-fit:cover; flex-shrink:0;}
+  .logo-text{font-size:16px; font-weight:600; color:#F2F4F7;}
+  .logo-text span{color:var(--accent-on-dark);}
+  header nav{display:flex; align-items:center; gap:26px;}
+  header nav a{font-size:14px; color:#C7CDD6;}
+  header nav a:hover{color:#fff;}
+  .nav-cta{background:var(--accent); color:#06231A !important; font-weight:600; padding:9px 18px; border-radius:8px;}
+  @media(max-width:760px){
+    header nav{gap:16px;}
+    header nav a:not(.nav-cta){display:none;}
+  }
+
+  /* ---------- migas ---------- */
+  .migas{border-bottom:1px solid var(--line); background:var(--bg-soft);}
+  .migas ol{
+    max-width:1180px; margin:0 auto; padding:13px 32px;
+    list-style:none; display:flex; flex-wrap:wrap; align-items:center; gap:9px;
+    font-size:13px; color:var(--muted);
+  }
+  .migas li{display:flex; align-items:center; gap:9px;}
+  .migas a:hover{color:var(--accent-dark);}
+  .migas li[aria-current]{color:var(--text); font-weight:600;}
+  .migas .sep{color:var(--line-strong);}
+
+  /* ---------- intro ---------- */
+  .intro{padding:66px 0 46px; text-align:center;}
+  .eyebrow{
+    display:inline-block; font-size:12px; font-weight:600; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--accent-dark);
+    background:var(--accent-soft); padding:7px 13px; border-radius:999px; margin-bottom:20px;
+  }
+  h1{
+    font-size:clamp(32px,4.8vw,48px); font-weight:800; letter-spacing:-.028em;
+    line-height:1.08; text-wrap:balance; margin-bottom:16px;
+  }
+  .intro p{color:var(--muted); font-size:18px; max-width:58ch; margin:0 auto;}
+
+  /* ---------- planes ---------- */
+  .planes{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:22px;
+    align-items:start; padding-bottom:18px;
+  }
+  .plan{
+    border:1px solid var(--line); border-radius:14px; padding:32px 28px;
+    display:flex; flex-direction:column; height:100%; background:var(--bg);
+  }
+  .plan.destacado{
+    border:1px solid var(--accent); box-shadow:0 12px 34px rgba(14,158,122,.12);
+    position:relative; padding-top:38px;
+  }
+  .cinta{
+    position:absolute; top:-13px; left:50%; transform:translateX(-50%);
+    background:var(--accent); color:#fff; font-size:11.5px; font-weight:700;
+    letter-spacing:.1em; text-transform:uppercase; padding:6px 15px; border-radius:999px;
+    white-space:nowrap;
+  }
+  .plan-nombre{font-size:20px; font-weight:700; letter-spacing:-.018em;}
+  .plan-para{font-size:14px; color:var(--muted); margin:7px 0 22px; min-height:42px;}
+  .plan-precio{
+    font-size:40px; font-weight:800; letter-spacing:-.032em; line-height:1;
+    color:var(--accent); font-variant-numeric:tabular-nums;
+  }
+  .plan-precio.consultar{font-size:32px;}
+  .plan-nota{font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted-2); margin-top:9px;}
+  .plan-usd{font-size:14px; font-weight:600; color:var(--muted-2); margin-top:6px; font-variant-numeric:tabular-nums;}
+  .plan-abono{
+    margin-top:18px; padding-top:16px; border-top:1px dashed var(--line-strong);
+    font-size:15px; color:var(--text);
+  }
+  .plan-abono b{font-size:22px; font-weight:800; letter-spacing:-.02em; color:var(--text); font-variant-numeric:tabular-nums;}
+  .plan-abono .usd{display:block; font-size:13px; color:var(--muted-2); font-weight:600; margin-top:3px;}
+  .plan-abono .tope{display:block; font-size:12.5px; color:var(--muted); margin-top:7px; line-height:1.45;}
+  .plan-abono .primer{
+    display:block; font-size:12.5px; font-weight:600; color:var(--accent-dark);
+    margin-top:9px; line-height:1.4;
+  }
+  .plan-abono .primer::before{content:"\2714"; margin-right:6px; font-weight:700;}
+  .plan ul{list-style:none; margin:26px 0; display:flex; flex-direction:column; gap:12px; flex:1;}
+  .plan li{display:flex; gap:11px; font-size:14.5px; align-items:flex-start; line-height:1.45;}
+  .plan li::before{
+    content:"✓"; flex-shrink:0; width:20px; height:20px; border-radius:6px; margin-top:2px;
+    background:var(--accent-soft); color:var(--accent-dark);
+    display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700;
+  }
+  .plan li.hereda{color:var(--muted); font-weight:600;}
+  .plan li.hereda::before{content:"+"; background:var(--bg-soft); color:var(--muted);}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:9px; width:100%;
+    padding:15px 22px; border-radius:var(--radius); font-size:15px; font-weight:600;
+  }
+  .btn-p{background:var(--accent); color:#fff;}
+  .btn-p:hover{background:var(--accent-dark);}
+  .btn-s{border:1px solid var(--line-strong); color:var(--text);}
+  .btn-s:hover{border-color:var(--accent); color:var(--accent-dark);}
+
+  .aclaracion{
+    text-align:center; font-size:13.5px; color:var(--muted); padding:8px 0 60px;
+  }
+  .aclaracion span{margin:0 12px; white-space:nowrap;}
+  .aclaracion span::before{content:"✔"; color:var(--accent); margin-right:6px; font-weight:700;}
+  .cambio{text-align:center; font-size:12.5px; color:var(--muted-2); padding-bottom:56px; max-width:52ch; margin:0 auto; line-height:1.5;}
+
+  /* ---------- comparación ---------- */
+  .seccion{padding:58px 0; border-top:1px solid var(--line);}
+  .rotulo{font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--accent-dark); margin-bottom:14px;}
+  h2{font-size:clamp(24px,3.4vw,32px); font-weight:700; letter-spacing:-.022em; margin-bottom:14px; text-wrap:balance;}
+  .seccion > .wrap > p{color:var(--muted); max-width:62ch; font-size:16.5px;}
+
+  .tabla-caja{overflow-x:auto; margin-top:32px; border:1px solid var(--line); border-radius:12px;}
+  table{border-collapse:collapse; width:100%; min-width:620px; font-size:14.5px;}
+  th, td{padding:15px 18px; text-align:left; border-bottom:1px solid var(--line);}
+  thead th{
+    background:var(--bg-soft); font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--muted); font-weight:700;
+  }
+  thead th:not(:first-child), td:not(:first-child){text-align:center; width:17%;}
+  tbody tr:last-child td{border-bottom:none;}
+  td:first-child{font-weight:500;}
+  .si{color:var(--accent-dark); font-weight:700;}
+  .no{color:var(--line-strong); font-weight:700;}
+
+  .faq{margin-top:30px; border-top:1px solid var(--line);}
+  .faq details{border-bottom:1px solid var(--line);}
+  .faq summary{
+    padding:20px 0; font-size:17px; font-weight:600; cursor:pointer;
+    display:flex; justify-content:space-between; align-items:center; gap:20px; letter-spacing:-.012em;
+  }
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:"+"; color:var(--accent); font-weight:700; font-size:21px; flex-shrink:0;}
+  .faq details[open] summary::after{content:"–";}
+  .faq p{padding:0 0 22px; color:var(--muted); max-width:66ch; font-size:15.5px;}
+
+  .cierre{background:var(--ink); color:#F2F4F7; padding:64px 0; text-align:center;}
+  .cierre h2{color:#fff; margin-bottom:14px;}
+  .cierre p{color:#AEB6C2; max-width:52ch; margin:0 auto 28px; font-size:16.5px;}
+  .cierre .btn{width:auto; background:var(--accent-on-dark); color:#05231B;}
+
+  /* ---------- pie ---------- */
+  footer{background:var(--ink); color:#AEB6C2; padding:52px 0 30px; border-top:1px solid rgba(255,255,255,.08);}
+  .footer-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:34px; margin-bottom:36px;}
+  .footer-col h4{color:#F2F4F7; font-size:13px; margin-bottom:13px;}
+  .footer-col a, .footer-col p{display:block; color:#AEB6C2; font-size:14px; margin-bottom:9px;}
+  .footer-col a:hover{color:var(--accent-on-dark);}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,.08); padding-top:20px;
+    display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between;
+    font-size:12.5px; color:var(--muted-2);
+  }
+
+  @media(max-width:960px){
+    .planes{grid-template-columns:1fr; gap:18px; max-width:520px; margin:0 auto;}
+    .plan.destacado{margin-top:14px;}
+    .plan-para{min-height:0;}
+    .aclaracion span{display:block; margin:7px 0;}
+  }
+  @media(max-width:560px){
+    .wrap, .header-inner, .migas ol{padding-left:20px; padding-right:20px;}
+  }
+
+  /* ---------- el recorrido de un mensaje ---------- */
+  .flujo{list-style:none; display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:38px;}
+  .flujo li{position:relative; padding:0 22px 0 0;}
+  .flujo li:not(:last-child)::after{
+    content:""; position:absolute; top:19px; right:11px; width:calc(100% - 52px); height:2px;
+    background:linear-gradient(90deg,var(--accent-soft),var(--line));
+  }
+  .paso-n{
+    width:38px; height:38px; border-radius:50%; background:var(--accent); color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    font-size:15px; font-weight:700; margin-bottom:16px; position:relative; z-index:2;
+  }
+  .flujo h3{font-size:17px; font-weight:700; letter-spacing:-.015em; margin-bottom:7px;}
+  .flujo p{font-size:14.5px; color:var(--muted); line-height:1.5;}
+  @media(max-width:860px){
+    .flujo{grid-template-columns:1fr; gap:26px;}
+    .flujo li{padding:0 0 0 54px;}
+    .flujo li::after{display:none !important;}
+    .paso-n{position:absolute; left:0; top:0; margin:0;}
+  }
+
+  /* ---------- los rubros ---------- */
+  .rubros{display:grid; grid-template-columns:repeat(auto-fit,minmax(310px,1fr)); gap:20px; margin-top:34px;}
+  .rubro{
+    border:1px solid var(--line); border-radius:14px; padding:26px 24px;
+    display:flex; flex-direction:column; scroll-margin-top:90px;
+  }
+  .rubro:target{border-color:var(--accent); box-shadow:0 12px 34px rgba(14,158,122,.12);}
+  .rubro-cab{display:flex; align-items:center; gap:12px; margin-bottom:6px;}
+  .rubro-icono{width:26px; height:26px; color:var(--accent); flex-shrink:0;}
+  .rubro h3{font-size:18px; font-weight:700; letter-spacing:-.018em;}
+  .rubro > p{font-size:14px; color:var(--muted); margin-bottom:18px;}
+  .rubro ul{list-style:none; display:flex; flex-direction:column; gap:10px; flex:1;}
+  .rubro li{display:flex; gap:10px; font-size:14.5px; align-items:flex-start; line-height:1.45;}
+  .rubro li::before{
+    content:"✓"; flex-shrink:0; width:19px; height:19px; border-radius:6px; margin-top:2px;
+    background:var(--accent-soft); color:var(--accent-dark);
+    display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700;
+  }
+  .rubro-pro{
+    margin-top:18px; padding-top:15px; border-top:1px dashed var(--line-strong);
+    font-size:14px; color:var(--text); line-height:1.5;
+  }
+  .rubro-pro b{color:var(--accent-dark);}
+
+  /* ---------- lo que no hace ---------- */
+  .limites{list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:18px; margin-top:32px;}
+  .limites li{
+    border-left:3px solid var(--line-strong); padding:4px 0 4px 18px;
+    font-size:15.5px; line-height:1.5;
+  }
+  .limites b{display:block; margin-bottom:4px; font-weight:700; letter-spacing:-.01em;}
+  .limites span{color:var(--muted);}
+
+  /* ---------- precios en chico ---------- */
+  .precios-mini{display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:32px; max-width:760px;}
+  .pm{border:1px solid var(--line); border-radius:14px; padding:26px 24px;}
+  .pm.destacado{border-color:var(--accent);}
+  .pm-n{font-size:12px; font-weight:600; letter-spacing:.13em; text-transform:uppercase; color:var(--muted-2); margin-bottom:10px;}
+  .pm.destacado .pm-n{color:var(--accent-dark);}
+  .pm-p{font-size:34px; font-weight:800; letter-spacing:-.03em; line-height:1; color:var(--accent); font-variant-numeric:tabular-nums;}
+  .pm-a{font-size:14.5px; color:var(--muted); margin-top:8px; font-variant-numeric:tabular-nums;}
+  .pm-l{font-size:14.5px; color:var(--text); margin-top:14px; line-height:1.5;}
+  .pm-mas{margin-top:26px; font-size:14px; color:var(--muted);}
+  @media(max-width:620px){.precios-mini{grid-template-columns:1fr;}}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://sarubi-ia.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Cómo funciona" }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Cómo se implementa un agente de IA en WhatsApp",
+      "description": "Los cuatro pasos para tener un agente de inteligencia artificial contestando el WhatsApp de tu negocio.",
+      "totalTime": "P2D",
+      "step": [
+        {"@type": "HowToStep", "position": 1, "name": "Me contás qué te preguntan", "text": "Una charla de veinte minutos. No hace falta que prepares nada."},
+        {"@type": "HowToStep", "position": 2, "name": "Lo armo con tu información", "text": "Cargamos tus precios, horarios, condiciones y tu forma de responder."},
+        {"@type": "HowToStep", "position": 3, "name": "Lo probás antes que un cliente", "text": "Le preguntás lo que se te ocurra y corregimos lo que no suene como vos."},
+        {"@type": "HowToStep", "position": 4, "name": "Queda andando", "text": "Recién cuando estés conforme sale a la cancha. Entre 24 y 48 horas en el plan Esencial."}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "¿Necesito cambiar mi número de WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "No. Todo se arma sobre el número que ya usás, en el mismo teléfono. Tus clientes no ven ningún cambio de contacto y vos podés tomar cualquier conversación cuando quieras."}},
+        {"@type": "Question", "name": "¿Qué pasa si le preguntan algo que no sabe?", "acceptedAnswer": {"@type": "Answer", "text": "Lo dice y te la pasa. Un agente bien configurado no adivina: cuando la consulta se sale de lo que tiene cargado, avisa que lo contesta una persona y te deriva la conversación con el contexto. Después, lo que contestás vos se puede cargar para que la próxima vez ya lo sepa."}},
+        {"@type": "Question", "name": "¿Puede agendar turnos?", "acceptedAnswer": {"@type": "Answer", "text": "Desde el plan Profesional, sí: toma el turno, la visita o la reserva y la deja cargada en tu calendario o en tu sistema de gestión. En el plan Esencial contesta la consulta y te pasa el pedido con el contexto, pero la carga la hacés vos."}},
+        {"@type": "Question", "name": "¿Cuánto tarda en estar funcionando?", "acceptedAnswer": {"@type": "Answer", "text": "Entre 24 y 48 horas en el plan Esencial, desde que tenemos la información de tu negocio. El plan Profesional lleva entre 5 y 7 días, porque incluye varios flujos y la conexión con tu sistema."}},
+        {"@type": "Question", "name": "Mi rubro no está en la lista, ¿sirve igual?", "acceptedAnswer": {"@type": "Answer", "text": "Casi siempre. El criterio no es el rubro sino si hay preguntas que se repiten: si contestás lo mismo veinte veces por semana, hay algo para automatizar. Los siete de arriba son los que más vemos, no los únicos. Escribinos y lo miramos sin cargo."}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body id="top">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PLNK82BD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img class="logo-mark" src="../imagenes/logo.png" width="28" height="28" alt="Logo SARUBIA">
+      <span class="logo-text">SARUB<span>IA</span></span>
+    </a>
+    <nav>
+      <a href="/como-funciona/">Cómo funciona</a>
+      <a href="/#servicios">Servicios</a>
+      <a href="/planes/">Planes</a>
+      <a href="https://wa.me/5491132351644" target="_blank" rel="noopener" class="nav-cta">Hablemos</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="migas" aria-label="Migas de pan">
+  <ol>
+    <li><a href="/">Inicio</a></li>
+    <li><span class="sep">/</span><span aria-current="page">Cómo funciona</span></li>
+  </ol>
+</nav>
+
+<section class="intro">
+  <div class="wrap">
+    <span class="eyebrow">Cómo funciona</span>
+    <h1>Un agente de IA contestando el WhatsApp de tu negocio</h1>
+    <p>Qué hace, qué no hace y cómo se pone en marcha. Con el detalle de qué cambia según el rubro, porque a una clínica no le preguntan lo mismo que a una distribuidora.</p>
+  </div>
+</section>
+
+<section class="seccion" style="border-top:none; padding-top:0;">
+  <div class="wrap">
+    <div class="rotulo">Qué es</div>
+    <h2>No es un chatbot de menú</h2>
+    <p>Un chatbot común te hace elegir entre opciones del 1 al 5 y se traba apenas alguien escribe algo distinto. Un agente de IA lee la consulta como está escrita, con las vueltas que le dé cada persona, y contesta con la información de tu negocio: tus precios, tus horarios, tus condiciones.</p>
+    <p style="margin-top:16px;">Funciona sobre el número de WhatsApp que ya usás. No hay una aplicación nueva que aprender ni un número que avisarle a tus clientes: el mismo teléfono, la misma conversación, pero con alguien del otro lado a las once de la noche.</p>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="wrap">
+    <div class="rotulo">Por dentro</div>
+    <h2>El recorrido de un mensaje</h2>
+    <p>Cuatro cosas pasan entre que alguien te escribe y que vos te enterás. Las dos del medio son las que hace el agente; la última es la que hace que puedas dejarlo solo.</p>
+    <ol class="flujo"><li><div class="paso-n">1</div><h3>Llega el mensaje</h3><p>A tu número de WhatsApp de siempre, en tu mismo teléfono. Tus clientes no notan ningún cambio.</p></li><li><div class="paso-n">2</div><h3>Entiende qué preguntan</h3><p>No es un menú de opciones del 1 al 5. Lee la consulta como está escrita, con las vueltas que le dé cada uno.</p></li><li><div class="paso-n">3</div><h3>Contesta con tu información</h3><p>Tus precios, tus horarios, tus condiciones. Lo que vos cargaste, no lo que la IA supone.</p></li><li><div class="paso-n">4</div><h3>O te lo pasa a vos</h3><p>Si la consulta se sale de lo cargado, lo dice y te la deriva con todo el contexto: quién preguntó, qué preguntó y qué se le contestó antes.</p></li></ol>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="wrap">
+    <div class="rotulo">Tu rubro</div>
+    <h2>Qué contesta en cada negocio</h2>
+    <p>El agente es el mismo; lo que cambia es qué tiene cargado y con qué se conecta. Estos son los siete rubros donde más lo implementamos, con lo que contesta en cada uno y qué se suma en el plan Profesional.</p>
+    <div class="rubros"><article class="rubro" id="clinicas"><div class="rubro-cab"><svg class="rubro-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><h3>Clínicas y consultorios</h3></div><p>La consulta administrativa llega a cualquier hora y casi nunca necesita a un profesional.</p><ul><li>Qué obras sociales atendés</li><li>Si hay turno y para cuándo</li><li>Aranceles, horarios y dirección</li></ul><p class="rubro-pro"><b>Con el plan Profesional</b>, además agenda el turno directamente en tu sistema, sin que nadie lo pase a mano.</p></article><article class="rubro" id="inmobiliarias"><div class="rubro-cab"><svg class="rubro-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 10.5 12 3.5l8.5 7"/><path d="M5.5 12.2V20h13v-7.8"/><path d="M10 20v-5h4v5"/></svg><h3>Inmobiliarias</h3></div><p>El que pregunta por una propiedad pregunta siempre lo mismo, y si no le contestás sigue mirando avisos.</p><ul><li>Si la propiedad sigue disponible</li><li>Expensas, garantía y requisitos</li><li>Zona, ambientes y superficie</li></ul><p class="rubro-pro"><b>Con el plan Profesional</b>, además coordina la visita y la deja cargada en tu agenda.</p></article><article class="rubro" id="estetica"><div class="rubro-cab"><svg class="rubro-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.2 13.9 9 19.8 10.9 13.9 12.8 12 18.6 10.1 12.8 4.2 10.9 10.1 9z"/><path d="M18.6 16.2 19.4 18.4 21.6 19.2 19.4 20 18.6 22.2 17.8 20 15.6 19.2 17.8 18.4z"/></svg><h3>Estética y odontología</h3></div><p>El precio de un tratamiento se pregunta de noche, y el que no recibe respuesta se enfría.</p><ul><li>Precio de cada tratamiento</li><li>Planes de pago y cuotas</li><li>Turnos disponibles</li></ul><p class="rubro-pro"><b>Con el plan Profesional</b>, además reserva el turno y lo recuerda el día antes.</p></article><article class="rubro" id="gimnasios"><div class="rubro-cab"><svg class="rubro-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.2 9.6v4.8"/><path d="M7 7.4v9.2"/><path d="M17 7.4v9.2"/><path d="M19.8 9.6v4.8"/><path d="M7 12h10"/></svg><h3>Gimnasios y estudios</h3></div><p>Cada socio que entra vale doce meses, y la consulta llega siempre fuera del horario de mostrador.</p><ul><li>Precios y planes</li><li>Horarios de cada clase</li><li>Cómo anotarse</li></ul><p class="rubro-pro"><b>Con el plan Profesional</b>, además anota la clase de prueba en tu agenda.</p></article><article class="rubro" id="concesionarias"><div class="rubro-cab"><svg class="rubro-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13.4 6.4 9.3A2 2 0 0 1 8.3 7.9h7.4a2 2 0 0 1 1.9 1.4l1.4 4.1"/><path d="M3.6 13.4h16.8v3.4H3.6z"/><circle cx="7.6" cy="17.6" r="1.6"/><circle cx="16.4" cy="17.6" r="1.6"/></svg><h3>Concesionarias y agencias</h3></div><p>Una sola operación que no se pierde paga el año entero del servicio.</p><ul><li>Si la unidad sigue disponible</li><li>Financiación y cuotas</li><li>Si toman usado como parte de pago</li></ul><p class="rubro-pro"><b>Con el plan Profesional</b>, además coordina el test drive y lo carga en tu agenda.</p></article><article class="rubro" id="distribuidoras"><div class="rubro-cab"><svg class="rubro-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.4 20.3 7.6v8.8L12 20.6 3.7 16.4V7.6z"/><path d="M3.7 7.6 12 11.8l8.3-4.2"/><path d="M12 11.8v8.8"/></svg><h3>Distribuidoras y mayoristas</h3></div><p>El cliente compra todos los meses, así que el tiempo que te ahorra se repite.</p><ul><li>Zonas y tiempos de entrega</li><li>Mínimo de compra</li><li>Lista de precios vigente</li></ul><p class="rubro-pro"><b>Con el plan Profesional</b>, además consulta el stock en tu sistema antes de contestar.</p></article><article class="rubro" id="ecommerce"><div class="rubro-cab"><svg class="rubro-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.7 8.3h12.6l.85 10.9a1.4 1.4 0 0 1-1.4 1.5H6.25a1.4 1.4 0 0 1-1.4-1.5z"/><path d="M9.2 8.3V6.5a2.8 2.8 0 0 1 5.6 0v1.8"/></svg><h3>E-commerce y tiendas online</h3></div><p>«¿Dónde está mi pedido?» es la pregunta más repetida del rubro, y la única que no se contesta sin mirar el sistema.</p><ul><li>Stock, talles y colores</li><li>Precios y medios de pago</li><li>Costo y tiempo de envío</li></ul><p class="rubro-pro"><b>Con el plan Profesional</b>, además busca el pedido en tu sistema y devuelve el estado de pago, el envío y el número de guía.</p></article></div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="wrap">
+    <div class="rotulo">Los límites</div>
+    <h2>Qué no hace</h2>
+    <p>Esto conviene leerlo antes de contratar, no después. Un agente que promete todo es un agente que va a decepcionar en algo.</p>
+    <ul class="limites"><li><b>No inventa</b><span>Cuando la consulta se sale de lo que tiene cargado, lo dice y te la deriva. Ni sí, ni no, ni una respuesta improvisada.</span></li><li><b>No da indicaciones profesionales</b><span>En una clínica contesta coberturas, horarios y turnos. Lo clínico es del profesional, siempre. Lo mismo con lo legal y lo financiero.</span></li><li><b>No cierra una venta complicada</b><span>Cuando hay que negociar, escuchar y ceder, va a hacer falta una persona. El agente llega hasta la puerta.</span></li><li><b>No reemplaza tu criterio</b><span>No sabe a qué cliente conviene hacerle una excepción. Vos sí.</span></li><li><b>Y no se mantiene solo</b><span>Si cambiás los precios y no avisás, va a seguir contestando los viejos. Por eso el abono incluye el mantenimiento: un agente sin mantener no se rompe, envejece.</span></li></ul>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="wrap">
+    <div class="rotulo">Cómo se arranca</div>
+    <h2>Cuatro pasos, y lo probás vos primero</h2>
+    <p>Ningún cliente tuyo habla con el agente hasta que vos digas que sí. Ese es el orden, y no se cambia.</p>
+    <ol class="flujo"><li><div class="paso-n">1</div><h3>Me contás qué te preguntan</h3><p>Una charla de veinte minutos. No hace falta que prepares nada.</p></li><li><div class="paso-n">2</div><h3>Lo armo con tu información</h3><p>Cargamos tus precios, horarios, condiciones y tu forma de responder.</p></li><li><div class="paso-n">3</div><h3>Lo probás antes que un cliente</h3><p>Le preguntás lo que se te ocurra y corregimos lo que no suene como vos.</p></li><li><div class="paso-n">4</div><h3>Queda andando</h3><p>Recién cuando estés conforme sale a la cancha. Entre 24 y 48 horas en el plan Esencial.</p></li></ol>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="wrap">
+    <div class="rotulo">Precios</div>
+    <h2>Implementación y abono, publicados</h2>
+    <p>La implementación se abona al contratar y el primer abono recién a los 30 días, así lo ves funcionando un mes entero antes de pagar el segundo peso. El abono cubre la API de WhatsApp que cobra Meta, el consumo de IA y el hosting.</p>
+    <div class="precios-mini">
+      <div class="pm">
+        <div class="pm-n">Esencial</div>
+        <div class="pm-p">$99.000</div>
+        <div class="pm-a">+ $89.000 / mes</div>
+        <div class="pm-l">Contesta lo que se repite y te deriva el resto, con el contexto.</div>
+      </div>
+      <div class="pm destacado">
+        <div class="pm-n">Profesional</div>
+        <div class="pm-p">$390.000</div>
+        <div class="pm-a">+ $169.000 / mes</div>
+        <div class="pm-l">Además califica las consultas, agenda y se conecta con tu sistema de gestión.</div>
+      </div>
+    </div>
+    <p class="pm-mas">Hay un tercer plan a medida, para automatizar procesos internos y no solo la atención. <a href="/planes/" style="color:var(--accent-dark); font-weight:600;">Ver los tres planes en detalle →</a></p>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="wrap">
+    <div class="rotulo">Preguntas</div>
+    <h2>Lo que más nos preguntan</h2>
+    <div class="faq"><details open><summary>¿Necesito cambiar mi número de WhatsApp?</summary><p>No. Todo se arma sobre el número que ya usás, en el mismo teléfono. Tus clientes no ven ningún cambio de contacto y vos podés tomar cualquier conversación cuando quieras.</p></details><details><summary>¿Qué pasa si le preguntan algo que no sabe?</summary><p>Lo dice y te la pasa. Un agente bien configurado no adivina: cuando la consulta se sale de lo que tiene cargado, avisa que lo contesta una persona y te deriva la conversación con el contexto. Después, lo que contestás vos se puede cargar para que la próxima vez ya lo sepa.</p></details><details><summary>¿Puede agendar turnos?</summary><p>Desde el plan Profesional, sí: toma el turno, la visita o la reserva y la deja cargada en tu calendario o en tu sistema de gestión. En el plan Esencial contesta la consulta y te pasa el pedido con el contexto, pero la carga la hacés vos.</p></details><details><summary>¿Cuánto tarda en estar funcionando?</summary><p>Entre 24 y 48 horas en el plan Esencial, desde que tenemos la información de tu negocio. El plan Profesional lleva entre 5 y 7 días, porque incluye varios flujos y la conexión con tu sistema.</p></details><details><summary>Mi rubro no está en la lista, ¿sirve igual?</summary><p>Casi siempre. El criterio no es el rubro sino si hay preguntas que se repiten: si contestás lo mismo veinte veces por semana, hay algo para automatizar. Los siete de arriba son los que más vemos, no los únicos. Escribinos y lo miramos sin cargo.</p></details></div>
+  </div>
+</section>
+
+<section class="cierre">
+  <div class="wrap">
+    <h2>¿Lo querés ver andando con tus datos?</h2>
+    <p>Me contás qué te preguntan todos los días y te armo el agente con tu información. Lo probás vos antes de que lo vea un cliente.</p>
+    <a href="https://wa.me/5491132351644" target="_blank" rel="noopener" class="btn">💬 Escribime por WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+          <img src="../imagenes/logo.png" width="26" height="26" alt="Logo SARUBIA" style="width:26px; height:26px; border-radius:6px; object-fit:cover;">
+          <h4 class="mono" style="margin:0;">SARUB<span style="color:var(--accent-on-dark);">IA</span></h4>
+        </div>
+        <p style="max-width:220px;">Inteligencia artificial aplicada a resultados reales.</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="mono">Contacto</h4>
+        <a href="https://wa.me/5491132351644" target="_blank" rel="noopener">WhatsApp: +54 9 11 3235-1644</a>
+      </div>
+      <div class="footer-col">
+        <h4 class="mono">Navegación</h4>
+        <a href="/">Inicio</a>
+        <a href="/como-funciona/">Cómo funciona</a>
+        <a href="/integracion-ia-whatsapp/">IA para WhatsApp</a>
+        <a href="/planes/">Planes y precios</a>
+      </div>
+      <div class="footer-col">
+        <h4 class="mono">Redes</h4>
+        <a href="https://www.instagram.com/sarubi_ai_solutions" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SARUBIA. Todos los derechos reservados.</span>
+      <span class="mono">BUENOS AIRES, AR</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

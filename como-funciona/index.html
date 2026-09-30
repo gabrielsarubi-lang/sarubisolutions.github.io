@@ -11,7 +11,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cómo funciona un agente de IA en WhatsApp | SARUBIA</title>
-<meta name="description" content="Qué hace, qué no hace y cómo se implementa un agente de inteligencia artificial en el WhatsApp de tu negocio. Con el detalle por rubro: clínicas, inmobiliarias, gimnasios, e-commerce y más.">
+<meta name="description" content="Qué hace, qué no hace, cómo se conecta por API con tu sistema de gestión o tu agenda, y cómo se implementa un agente de IA en el WhatsApp de tu negocio. Con el detalle por rubro.">
 <link rel="canonical" href="https://sarubi-ia.com/como-funciona/">
 
 <meta property="og:type" content="article">
@@ -19,7 +19,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:locale" content="es_AR">
 <meta property="og:url" content="https://sarubi-ia.com/como-funciona/">
 <meta property="og:title" content="Cómo funciona un agente de IA en WhatsApp | SARUBIA">
-<meta property="og:description" content="Qué hace, qué no hace y cómo se implementa, con el detalle por rubro: clínicas, inmobiliarias, gimnasios, e-commerce y más.">
+<meta property="og:description" content="Qué hace, qué no hace, cómo se conecta con tu sistema por API y cómo se implementa. Con el detalle por rubro.">
 <meta property="og:image" content="https://sarubi-ia.com/imagenes/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -272,6 +272,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .rubro-pro b{color:var(--accent-dark);}
 
+  /* ---------- el menú de ejemplo y los sistemas ---------- */
+  .integra{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:34px; margin-top:34px; align-items:start;}
+  @media(max-width:860px){.integra{grid-template-columns:1fr; gap:28px;}}
+  .md-titulo{font-size:12px; font-weight:600; letter-spacing:.13em; text-transform:uppercase; color:var(--muted-2); margin-bottom:14px;}
+  .menu-demo{list-style:none; display:flex; flex-direction:column; gap:2px;}
+  .menu-demo li{display:flex; gap:14px; align-items:flex-start; padding:15px 0; border-top:1px solid var(--line);}
+  .menu-demo li:first-child{border-top:none; padding-top:0;}
+  .md-letra{
+    flex-shrink:0; width:28px; height:28px; border-radius:8px; margin-top:1px;
+    background:var(--accent-soft); color:var(--accent-dark);
+    display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700;
+  }
+  .menu-demo b{display:block; font-size:15.5px; font-weight:700; letter-spacing:-.012em;}
+  .menu-demo span:not(.md-letra){display:block; font-size:14.5px; color:var(--muted); line-height:1.5; margin-top:3px;}
+  .sistemas{list-style:none; display:flex; flex-direction:column; gap:2px;}
+  .sistemas li{padding:15px 0; border-top:1px solid var(--line);}
+  .sistemas li:first-child{border-top:none; padding-top:0;}
+  .sistemas b{display:block; font-size:15.5px; font-weight:700; letter-spacing:-.012em; margin-bottom:3px;}
+  .sistemas span{display:block; font-size:14.5px; color:var(--muted); line-height:1.5;}
+  .nota-api{
+    margin-top:26px; padding:18px 20px; border-left:3px solid var(--accent);
+    background:var(--bg-soft); border-radius:0 10px 10px 0;
+    font-size:15px; color:var(--text); line-height:1.55; max-width:70ch;
+  }
+
   /* ---------- lo que no hace ---------- */
   .limites{list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:18px; margin-top:32px;}
   .limites li{
@@ -323,6 +348,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {"@type": "Question", "name": "¿Necesito cambiar mi número de WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "No. Todo se arma sobre el número que ya usás, en el mismo teléfono. Tus clientes no ven ningún cambio de contacto y vos podés tomar cualquier conversación cuando quieras."}},
         {"@type": "Question", "name": "¿Qué pasa si le preguntan algo que no sabe?", "acceptedAnswer": {"@type": "Answer", "text": "Lo dice y te la pasa. Un agente bien configurado no adivina: cuando la consulta se sale de lo que tiene cargado, avisa que lo contesta una persona y te deriva la conversación con el contexto. Después, lo que contestás vos se puede cargar para que la próxima vez ya lo sepa."}},
         {"@type": "Question", "name": "¿Puede agendar turnos?", "acceptedAnswer": {"@type": "Answer", "text": "Desde el plan Profesional, sí: toma el turno, la visita o la reserva y la deja cargada en tu calendario o en tu sistema de gestión. En el plan Esencial contesta la consulta y te pasa el pedido con el contexto, pero la carga la hacés vos."}},
+        {"@type": "Question", "name": "¿Se conecta con el sistema que uso?", "acceptedAnswer": {"@type": "Answer", "text": "Si tu sistema tiene API, sí: el agente le consulta en el momento y contesta con el dato real, no con una copia desactualizada. Sirve para agendas, gestión, tiendas online y CRM. Si el sistema no expone API, en el diagnóstico miramos qué otro camino hay — a veces se resuelve con una planilla sincronizada y a veces no se puede, y en ese caso te lo decimos antes de cobrarte nada."}},
         {"@type": "Question", "name": "¿Cuánto tarda en estar funcionando?", "acceptedAnswer": {"@type": "Answer", "text": "Entre 24 y 48 horas en el plan Esencial, desde que tenemos la información de tu negocio. El plan Profesional lleva entre 5 y 7 días, porque incluye varios flujos y la conexión con tu sistema."}},
         {"@type": "Question", "name": "Mi rubro no está en la lista, ¿sirve igual?", "acceptedAnswer": {"@type": "Answer", "text": "Casi siempre. El criterio no es el rubro sino si hay preguntas que se repiten: si contestás lo mismo veinte veces por semana, hay algo para automatizar. Los siete de arriba son los que más vemos, no los únicos. Escribinos y lo miramos sin cargo."}}
       ]
@@ -369,9 +395,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="seccion" style="border-top:none; padding-top:0;">
   <div class="wrap">
     <div class="rotulo">Qué es</div>
-    <h2>No es un chatbot de menú</h2>
-    <p>Un chatbot común te hace elegir entre opciones del 1 al 5 y se traba apenas alguien escribe algo distinto. Un agente de IA lee la consulta como está escrita, con las vueltas que le dé cada persona, y contesta con la información de tu negocio: tus precios, tus horarios, tus condiciones.</p>
-    <p style="margin-top:16px;">Funciona sobre el número de WhatsApp que ya usás. No hay una aplicación nueva que aprender ni un número que avisarle a tus clientes: el mismo teléfono, la misma conversación, pero con alguien del otro lado a las once de la noche.</p>
+    <h2>Atención que entiende, y que además consulta</h2>
+    <p>Un agente de IA en tu WhatsApp hace dos cosas que un contestador automático no puede. La primera es entender: escriba lo que escriba la persona, con las vueltas que le dé, identifica qué está preguntando. La segunda es buscar el dato donde está — en la información que cargamos, o directamente en tu sistema de gestión, tu agenda o tu tienda online.</p>
+    <p style="margin-top:16px;">Cuando conviene ordenar la atención, armamos un menú de opciones, porque en muchos negocios eso acorta la conversación en vez de alargarla. La diferencia es que cada opción lleva a una respuesta real, y que el que escribe suelto en lugar de elegir igual recibe respuesta.</p>
+    <p style="margin-top:16px;">Todo sobre el número de WhatsApp que ya usás. No hay una aplicación nueva que aprender ni un número que avisarle a tus clientes: el mismo teléfono, la misma conversación, pero con alguien del otro lado a las once de la noche.</p>
   </div>
 </section>
 
@@ -380,7 +407,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="rotulo">Por dentro</div>
     <h2>El recorrido de un mensaje</h2>
     <p>Cuatro cosas pasan entre que alguien te escribe y que vos te enterás. Las dos del medio son las que hace el agente; la última es la que hace que puedas dejarlo solo.</p>
-    <ol class="flujo"><li><div class="paso-n">1</div><h3>Llega el mensaje</h3><p>A tu número de WhatsApp de siempre, en tu mismo teléfono. Tus clientes no notan ningún cambio.</p></li><li><div class="paso-n">2</div><h3>Entiende qué preguntan</h3><p>No es un menú de opciones del 1 al 5. Lee la consulta como está escrita, con las vueltas que le dé cada uno.</p></li><li><div class="paso-n">3</div><h3>Contesta con tu información</h3><p>Tus precios, tus horarios, tus condiciones. Lo que vos cargaste, no lo que la IA supone.</p></li><li><div class="paso-n">4</div><h3>O te lo pasa a vos</h3><p>Si la consulta se sale de lo cargado, lo dice y te la deriva con todo el contexto: quién preguntó, qué preguntó y qué se le contestó antes.</p></li></ol>
+    <ol class="flujo"><li><div class="paso-n">1</div><h3>Llega el mensaje</h3><p>A tu número de WhatsApp de siempre, en tu mismo teléfono. Tus clientes no notan ningún cambio.</p></li><li><div class="paso-n">2</div><h3>Entiende qué necesita</h3><p>Elija una opción del menú o escriba suelto, el agente identifica de qué se trata la consulta.</p></li><li><div class="paso-n">3</div><h3>Busca la respuesta</h3><p>En la información que cargamos, o directamente en tu sistema si está conectado: stock, agenda, el estado de un pedido.</p></li><li><div class="paso-n">4</div><h3>Contesta, o te lo pasa</h3><p>Si la consulta se sale de lo que tiene, lo dice y te la deriva con todo el contexto: quién preguntó, qué preguntó y qué se le contestó antes.</p></li></ol>
+  </div>
+</section>
+
+<section class="seccion" id="integraciones">
+  <div class="wrap">
+    <div class="rotulo">Integraciones</div>
+    <h2>Se conecta con tus sistemas por API</h2>
+    <p>Acá está la diferencia entre un agente que recita lo que le cargaron y uno que consulta. Si tu sistema expone una API, el agente le pregunta en el momento y contesta con el dato real: el stock de hoy, el turno que quedó libre hace diez minutos, el pedido que salió esta mañana.</p>
+    <div class="integra">
+      <div>
+        <div class="md-titulo">Un menú, con cada opción conectada</div>
+        <ul class="menu-demo"><li><span class="md-letra">A</span><div><b>Productos y precios</b><span>Contesta con tu catálogo y tu lista de precios vigente.</span></div></li><li><span class="md-letra">B</span><div><b>Mi pedido</b><span>Pide el mail o el número de pedido, lo busca en tu sistema y devuelve el estado de pago, el envío y el número de guía.</span></div></li><li><span class="md-letra">C</span><div><b>Envíos</b><span>Zonas, costos y tiempos de entrega.</span></div></li><li><span class="md-letra">D</span><div><b>Hablar con una persona</b><span>Te pasa la conversación con todo lo que se dijo hasta ahí.</span></div></li></ul>
+      </div>
+      <div>
+        <div class="md-titulo">Con qué se conecta</div>
+        <ul class="sistemas"><li><b>Tu agenda</b><span>Google Calendar, el sistema de turnos que ya usás o el de la clínica.</span></li><li><b>Tu gestión o ERP</b><span>Para consultar stock, precios vigentes y el estado de un pedido.</span></li><li><b>Tu tienda online</b><span>Tiendanube, Shopify, WooCommerce y las que exponen API.</span></li><li><b>Tu CRM o tu planilla</b><span>Para dejar cargado quién preguntó qué, sin que anotes nada.</span></li></ul>
+      </div>
+    </div>
+    <p class="nota-api"><b>Lo honesto:</b> esto depende de que tu sistema tenga API y la deje usar. La mayoría de los sistemas de gestión, agendas y tiendas online la tienen. Si el tuyo no, en el diagnóstico miramos qué otro camino hay — a veces se resuelve con una planilla sincronizada y a veces no se puede. En ese caso te lo decimos antes de cobrarte nada.</p>
   </div>
 </section>
 
@@ -438,7 +484,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="rotulo">Preguntas</div>
     <h2>Lo que más nos preguntan</h2>
-    <div class="faq"><details open><summary>¿Necesito cambiar mi número de WhatsApp?</summary><p>No. Todo se arma sobre el número que ya usás, en el mismo teléfono. Tus clientes no ven ningún cambio de contacto y vos podés tomar cualquier conversación cuando quieras.</p></details><details><summary>¿Qué pasa si le preguntan algo que no sabe?</summary><p>Lo dice y te la pasa. Un agente bien configurado no adivina: cuando la consulta se sale de lo que tiene cargado, avisa que lo contesta una persona y te deriva la conversación con el contexto. Después, lo que contestás vos se puede cargar para que la próxima vez ya lo sepa.</p></details><details><summary>¿Puede agendar turnos?</summary><p>Desde el plan Profesional, sí: toma el turno, la visita o la reserva y la deja cargada en tu calendario o en tu sistema de gestión. En el plan Esencial contesta la consulta y te pasa el pedido con el contexto, pero la carga la hacés vos.</p></details><details><summary>¿Cuánto tarda en estar funcionando?</summary><p>Entre 24 y 48 horas en el plan Esencial, desde que tenemos la información de tu negocio. El plan Profesional lleva entre 5 y 7 días, porque incluye varios flujos y la conexión con tu sistema.</p></details><details><summary>Mi rubro no está en la lista, ¿sirve igual?</summary><p>Casi siempre. El criterio no es el rubro sino si hay preguntas que se repiten: si contestás lo mismo veinte veces por semana, hay algo para automatizar. Los siete de arriba son los que más vemos, no los únicos. Escribinos y lo miramos sin cargo.</p></details></div>
+    <div class="faq"><details open><summary>¿Necesito cambiar mi número de WhatsApp?</summary><p>No. Todo se arma sobre el número que ya usás, en el mismo teléfono. Tus clientes no ven ningún cambio de contacto y vos podés tomar cualquier conversación cuando quieras.</p></details><details><summary>¿Qué pasa si le preguntan algo que no sabe?</summary><p>Lo dice y te la pasa. Un agente bien configurado no adivina: cuando la consulta se sale de lo que tiene cargado, avisa que lo contesta una persona y te deriva la conversación con el contexto. Después, lo que contestás vos se puede cargar para que la próxima vez ya lo sepa.</p></details><details><summary>¿Puede agendar turnos?</summary><p>Desde el plan Profesional, sí: toma el turno, la visita o la reserva y la deja cargada en tu calendario o en tu sistema de gestión. En el plan Esencial contesta la consulta y te pasa el pedido con el contexto, pero la carga la hacés vos.</p></details><details><summary>¿Se conecta con el sistema que uso?</summary><p>Si tu sistema tiene API, sí: el agente le consulta en el momento y contesta con el dato real, no con una copia desactualizada. Sirve para agendas, gestión, tiendas online y CRM. Si el sistema no expone API, en el diagnóstico miramos qué otro camino hay — a veces se resuelve con una planilla sincronizada y a veces no se puede, y en ese caso te lo decimos antes de cobrarte nada.</p></details><details><summary>¿Cuánto tarda en estar funcionando?</summary><p>Entre 24 y 48 horas en el plan Esencial, desde que tenemos la información de tu negocio. El plan Profesional lleva entre 5 y 7 días, porque incluye varios flujos y la conexión con tu sistema.</p></details><details><summary>Mi rubro no está en la lista, ¿sirve igual?</summary><p>Casi siempre. El criterio no es el rubro sino si hay preguntas que se repiten: si contestás lo mismo veinte veces por semana, hay algo para automatizar. Los siete de arriba son los que más vemos, no los únicos. Escribinos y lo miramos sin cargo.</p></details></div>
   </div>
 </section>
 

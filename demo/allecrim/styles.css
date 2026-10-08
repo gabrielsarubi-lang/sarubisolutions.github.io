@@ -334,3 +334,23 @@ p { margin: 0 0 1em; }
   .pacote__corpo { padding: 26px 22px; }
   .contato__logo { max-width: 240px; }
 }
+
+/* ---------- Barra de demonstração ---------- */
+.demo-bar {
+  display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px 14px;
+  background: #14110d; color: #e9e2d2; padding: 9px 20px; font-family: var(--caps); font-size: .78rem;
+  text-align: center; line-height: 1.4;
+}
+.demo-bar__selo {
+  display: inline-flex; align-items: center; gap: 7px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+  font-size: .68rem; color: #f1c38f; border: 1px solid rgba(241, 195, 143, .45); border-radius: 999px; padding: 3px 10px;
+}
+.demo-bar__ponto { width: 7px; height: 7px; border-radius: 50%; background: #f1c38f; animation: demo-pulso 1.8s ease-in-out infinite; }
+@keyframes demo-pulso { 50% { opacity: .3; } }
+.demo-bar__texto strong { color: #fff; letter-spacing: .04em; }
+.demo-bar__cta { color: #f1c38f; font-weight: 600; text-decoration: none; border-bottom: 1px solid currentColor; }
+.demo-bar__cta:hover { color: #fff; }
+@media (max-width: 560px) {
+  .demo-bar { font-size: .72rem; padding: 8px 14px; }
+  .demo-bar__extra { display: none; }
+}

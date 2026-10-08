@@ -45,3 +45,12 @@ if ("IntersectionObserver" in window) {
     obs.observe(el);
   });
 }
+
+// Altura da barra de demonstração (para o cabeçalho fixo ficar logo abaixo)
+const demoBar = document.querySelector(".demo-bar");
+if (demoBar) {
+  const ajustarDemo = () =>
+    document.documentElement.style.setProperty("--demo-h", demoBar.offsetHeight + "px");
+  ajustarDemo();
+  window.addEventListener("resize", ajustarDemo);
+}

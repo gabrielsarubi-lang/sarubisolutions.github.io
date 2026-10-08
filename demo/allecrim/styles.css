@@ -366,6 +366,7 @@ p { margin: 0 0 1em; }
 
 /* ---------- Barra de demonstração ---------- */
 .demo-bar {
+  position: sticky; top: 0; z-index: 70;
   display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px 14px;
   background: #14110d; color: #e9e2d2; padding: 9px 20px; font-family: var(--caps); font-size: .78rem;
   text-align: center; line-height: 1.4;
@@ -381,5 +382,9 @@ p { margin: 0 0 1em; }
 .demo-bar__cta:hover { color: #fff; }
 @media (max-width: 560px) {
   .demo-bar { font-size: .72rem; padding: 8px 14px; }
-  .demo-bar__extra { display: none; }
+  .demo-bar__texto { display: none; }
 }
+
+/* Barra de demo sempre visível: o cabeçalho gruda logo abaixo dela */
+.topo { top: var(--demo-h, 0px); }
+html { scroll-padding-top: calc(80px + var(--demo-h, 0px)); }

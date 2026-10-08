@@ -213,6 +213,35 @@ p { margin: 0 0 1em; }
 .tipos strong { font-family: var(--serif); color: var(--verde); font-size: 1.05rem; }
 .tipos span { font-family: var(--caps); font-size: .72rem; font-weight: 600; letter-spacing: .06em; color: var(--marrom); text-transform: uppercase; }
 
+/* ---------- Avaliações ---------- */
+.avaliacoes { display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; }
+.avaliacao {
+  margin: 0; background: var(--branco); border-radius: var(--raio); padding: 28px; box-shadow: var(--sombra);
+  display: flex; flex-direction: column; gap: 14px;
+}
+.avaliacao--destaque { grid-row: span 3; justify-content: center; border-top: 5px solid var(--marrom); }
+.avaliacao__topo { display: flex; align-items: center; gap: 12px; }
+.avaliacao__nota {
+  background: var(--verde); color: var(--creme); font-family: var(--caps); font-weight: 700; font-size: 1rem;
+  min-width: 46px; height: 40px; padding: 0 10px; border-radius: 8px 8px 8px 0; display: grid; place-items: center;
+}
+.avaliacao__rotulo { font-family: var(--serif); font-weight: 600; color: var(--verde); font-size: 1.15rem; }
+.avaliacao blockquote { margin: 0; color: var(--tinta-suave); font-size: .98rem; }
+.avaliacao--destaque blockquote { font-family: var(--serif); font-style: italic; font-size: 1.3rem; line-height: 1.5; color: var(--tinta); }
+.avaliacao figcaption { font-size: .85rem; color: var(--tinta-suave); margin-top: auto; }
+.avaliacao figcaption strong { color: var(--verde); }
+.avaliacao--destaque { position: relative; padding: 40px; }
+.avaliacao--destaque::before {
+  content: "“"; position: absolute; right: 28px; top: 4px; font-family: var(--serif); font-size: 9rem; line-height: 1;
+  color: var(--marrom); opacity: .15;
+}
+.avaliacao--destaque blockquote { font-size: 1.5rem; }
+.avaliacao--destaque figcaption { margin-top: 8px; font-size: .95rem; }
+@media (max-width: 820px) {
+  .avaliacoes { grid-template-columns: 1fr; }
+  .avaliacao--destaque { grid-row: auto; }
+}
+
 /* ---------- Pacotes ---------- */
 .pacotes { display: grid; grid-template-columns: 1.5fr 1fr; gap: 28px; }
 .pacote {

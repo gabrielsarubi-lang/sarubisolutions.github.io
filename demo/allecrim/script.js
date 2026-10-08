@@ -28,7 +28,7 @@ document.getElementById("ano").textContent = new Date().getFullYear();
 // Animação suave ao rolar
 if ("IntersectionObserver" in window) {
   const alvos = document.querySelectorAll(
-    ".cabecalho-secao, .duas-col > *, .quarto, .pacote, .atracoes li, .contato > *"
+    ".cabecalho-secao, .duas-col > *, .quarto, .avaliacao, .pacote, .atracoes li, .contato > *"
   );
   const obs = new IntersectionObserver(
     (entradas) =>

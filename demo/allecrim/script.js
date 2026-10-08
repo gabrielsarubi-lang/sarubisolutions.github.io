@@ -53,4 +53,6 @@ if (demoBar) {
     document.documentElement.style.setProperty("--demo-h", demoBar.offsetHeight + "px");
   ajustarDemo();
   window.addEventListener("resize", ajustarDemo);
+  if ("ResizeObserver" in window) new ResizeObserver(ajustarDemo).observe(demoBar);
+  if (document.fonts) document.fonts.ready.then(ajustarDemo);
 }

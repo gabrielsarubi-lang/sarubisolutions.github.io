@@ -366,7 +366,7 @@ p { margin: 0 0 1em; }
 
 /* ---------- Barra de demonstração ---------- */
 .demo-bar {
-  position: sticky; top: 0; z-index: 70;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 70;
   display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px 14px;
   background: #14110d; color: #e9e2d2; padding: 9px 20px; font-family: var(--caps); font-size: .78rem;
   text-align: center; line-height: 1.4;
@@ -381,10 +381,12 @@ p { margin: 0 0 1em; }
 .demo-bar__cta { color: #f1c38f; font-weight: 600; text-decoration: none; border-bottom: 1px solid currentColor; }
 .demo-bar__cta:hover { color: #fff; }
 @media (max-width: 560px) {
-  .demo-bar { font-size: .72rem; padding: 8px 14px; }
-  .demo-bar__texto { display: none; }
+  .demo-bar { font-size: .7rem; padding: 7px 10px; gap: 4px 8px; }
+  .demo-bar__selo { font-size: .6rem; padding: 2px 8px; letter-spacing: .12em; }
+  .demo-bar__extra { display: none; }
 }
 
 /* Barra de demo sempre visível: o cabeçalho gruda logo abaixo dela */
-.topo { top: var(--demo-h, 0px); }
+body { padding-top: var(--demo-h, 41px); }
+.topo { top: var(--demo-h, 41px); }
 html { scroll-padding-top: calc(80px + var(--demo-h, 0px)); }

@@ -149,6 +149,10 @@ p { margin: 0 0 1em; }
 .bilhete strong { font-family: var(--serif); font-size: 1.15rem; color: var(--verde); }
 .bilhete small { font-size: .74rem; color: var(--tinta-suave); font-style: italic; }
 
+.hero__servicos { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 10px 22px; }
+.hero__servicos li { display: flex; align-items: center; gap: 8px; font-family: var(--caps); font-size: .82rem; font-weight: 600; color: var(--verde); }
+.hero__servicos svg { width: 22px; height: 22px; color: var(--marrom); }
+
 /* ---------- Seções ---------- */
 .secao { padding: 96px 0; }
 .secao--papel { background: var(--papel); }
@@ -200,6 +204,12 @@ p { margin: 0 0 1em; }
   font-weight: 600; color: var(--verde) !important; margin-top: auto;
   padding-top: 14px; border-top: 1px dashed var(--papel-escuro);
 }
+.quarto__wifi {
+  display: inline-flex; align-items: center; gap: 6px; align-self: flex-start; margin: 0 0 4px !important;
+  font-family: var(--caps); font-size: .72rem !important; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--verde) !important; background: var(--creme); border-radius: 999px; padding: 4px 10px;
+}
+.quarto__wifi svg { width: 16px; height: 16px; color: var(--marrom); }
 .quarto__cap svg { width: 20px; height: 20px; color: var(--marrom); }
 
 /* tipos de apartamento */
